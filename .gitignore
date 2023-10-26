@@ -2,3 +2,5 @@ node_modules
 backend/datasets
 backend/notebooks
 .DS_Store
+backend/backup_key.txt
+.env

@@ -5,8 +5,9 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
-    const response = await fetch('http://localhost:5500/process', {
+
+    console.log(userInput);
+    var response = await fetch('http://localhost:5500/suicide', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -14,7 +15,20 @@ function App() {
       body: JSON.stringify({ userInput }),
     });
   
-    const data = await response.json();
+    var data = await response.json();
+    console.log(data);
+
+
+    //AI STUFF
+    response = await fetch('http://localhost:5500/gpt', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ userInput }),
+    });
+  
+  data = await response.json();
     console.log(data);
   };
 

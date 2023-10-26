@@ -2,14 +2,51 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { exec } = require('child_process');
 const cors = require('cors'); 
+require('dotenv').config();
+
+const OpenAI = require('openai');
+const openai = new OpenAI({
+  apiKey : process.env.OPENAI_API_KEY,
+});
 
 const app = express();
 
 app.use(cors()); 
-
 app.use(bodyParser.json());
 
-app.post('/process', (req, res) => {
+// Route for GPT call
+app.post('/gpt', async (req, res) => {
+  const userInput = req.body.userInput;
+
+  try {
+    const response = await openai.chat.completions.create({
+      model: 'gpt-3.5-turbo',
+      messages: [
+        {
+          role: 'system',
+          content: 'You are a helpful therapist analysing patients\' suicidal thoughts. Act as a therapist.',
+        },
+        {
+          role: 'user',
+          content: 'Deeply analyse this user\'s feelings within 5 lines: \"'+userInput + "\"",
+        },
+      ],
+      max_tokens: 200,
+    });
+
+    var gptOutput = response.choices[0].message.content;
+    console.log(`Output from GPT-3.5 Turbo: ${gptOutput}`);
+
+    // You can send the `gptOutput` as needed, for example, send it back as a response.
+    res.json({ result: gptOutput });
+  } catch (error) {
+    console.error('Error calling OpenAI API:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+// Route for suicide.py call
+app.post('/suicide', (req, res) => {
   const userInput = req.body.userInput;
 
   exec(`python3 suicide.py "${userInput}"`, (error, stdout, stderr) => {
