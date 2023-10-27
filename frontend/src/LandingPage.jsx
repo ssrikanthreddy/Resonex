@@ -1,13 +1,29 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import './App.css'
-import Lenis from '@studio-freight/lenis'
+import Lenis from '@studio-freight/lenis';
 import Navbar from './Navbar';
 import DemoButton from './DemoButton';
 import Features from './Features';
 
+
 const LandingPage = () => {
+
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10*t))
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+
     useEffect(() => {
+        
         
         setTimeout(() => {
 
@@ -97,7 +113,13 @@ const LandingPage = () => {
         <DemoButton/>
 
         <div className='col'>
-           
+            <Features/>
+            <Features/>
+            <Features/>
+            <Features/>
+            <Features/>
+            <Features/>
+            <Features/>
 
         </div>
 
