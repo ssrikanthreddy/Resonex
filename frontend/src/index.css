@@ -6,7 +6,8 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background: linear-gradient(to right, #360033, #175c98); 
+  /* background: linear-gradient(to right, #360033, #175c98);  */
+  background: linear-gradient(to right, #0e1c26, #2a454b, #294861);
   /* background-image: url('./assets/grad.jpeg'); */
   background-size: cover;
 

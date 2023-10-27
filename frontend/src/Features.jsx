@@ -39,7 +39,7 @@ const Features = () => {
     }, [animationTriggered]);
 
     return (
-        <div className="features-container" ref={featuresRef}>
+        <div id='features' className="features-container" ref={featuresRef}>
             <h2>Key Features</h2>
             <ul className="feature-list">
                 <li>Disturbed Mind Analysis: Utilize advanced AI algorithms to analyze and assess disturbed and suicidal thoughts.</li>
