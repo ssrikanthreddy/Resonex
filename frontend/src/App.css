@@ -12,18 +12,13 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: linear-gradient(to right, #360033, #0b8793);
+  background: linear-gradient(to right, #360033, #175c98); 
+  /* background-image: url('./assets/grad.jpeg');
+  background-size: cover; */
   overflow: hidden;
 }
 
-.circle {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, #7209b7, #3a0ca3);
-  border-radius: 50%;
-  transform: scale(0);
-}
+/*Landing Page styles*/
 
 .landing-text {
   display: flex;
@@ -31,10 +26,14 @@
   height: 20%;
   font-family: 'Poppins';
   font-weight: bold;
-  font-size: 2.6rem;
+  font-size: 1.7vw;
   color: #fff;
   margin-top: 2px;
   opacity: 1;
+}
+
+.landing-text span {
+  opacity: 0;
 }
 
 .space {
@@ -42,4 +41,49 @@
 }
 
 
+.navbar {
+  justify-content: center;
+  margin: 3vh 0vh 0vh;
+  padding: 0vh 3vh 0vh;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  height: 10%; 
+  width: 60%;
+}
 
+.navbar-option {
+  font-family: 'Poppins';
+  font-weight: 400 ;
+  opacity: 0;
+  width: 100%;
+}
+
+.nav-left {
+  text-align: left;
+}
+
+.nav-center {
+  text-align: center;
+}
+
+.nav-right {
+  text-align: right;
+}
+
+
+.name {
+  font-size: 8em;
+  margin-bottom: 0em;
+}
+
+.demo-button {
+  font-family: 'Poppins';
+  font-size: 1.4em;
+  border-radius: 20px;
+  opacity: 0;
+  /* background: linear-gradient(to left, #360033, #175c98);  */
+  background-size: cover;
+  border: solid rgb(255, 255, 255) 2px;
+}
