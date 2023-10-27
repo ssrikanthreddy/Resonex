@@ -1,4 +1,5 @@
 #root {
+  justify-content: center;
   display: flex;
   width: 100%;
 }
@@ -7,14 +8,14 @@
   overflow: auto;
   scroll-behavior: smooth;
   position: relative;
-  width: 100%;
+  width: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: linear-gradient(to right, #360033, #175c98); 
-  /* background-image: url('./assets/grad.jpeg');
-  background-size: cover; */
+ 
+  /* background-image: url('./assets/grad.jpeg'); */
+  background-size: cover;
   overflow: hidden;
 }
 
@@ -43,17 +44,18 @@
 
 .navbar {
   justify-content: center;
-  margin: 3vh 0vh 0vh;
+  margin: 4vh 0vh 0vh;
   padding: 0vh 3vh 0vh;
   position: absolute;
   top: 0;
   display: flex;
   flex-direction: row;
   height: 10%; 
-  width: 60%;
+  width: 100%;
 }
 
 .navbar-option {
+  font-size: 1vw;
   font-family: 'Poppins';
   font-weight: 400 ;
   opacity: 0;
@@ -75,14 +77,14 @@
 
 .name {
   margin-top: 25vh;
-  font-size: 8em;
+  font-size: 8.4vw;
   margin-bottom: 1vh;
 }
 
 .demo-button {
   margin: 17vh 0vh 40vh;
   font-family: 'Poppins';
-  font-size: 1.4em;
+  font-size: 1.47vw;
   border-radius: 20px;
   opacity: 0;
   /* background: linear-gradient(to left, #360033, #175c98);  */
