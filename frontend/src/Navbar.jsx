@@ -1,6 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import gsap from 'gsap';
 
 const Navbar = () => {
+
+    useEffect(()=>{
+
+        setTimeout(() => {
+            const navs = document.querySelectorAll('.navbar-option');
+    
+            gsap.fromTo(
+                navs,
+                { opacity: 0 },
+                { opacity: 1, duration: 2, stagger: 0.01, ease: 'power2.out' }
+            );
+    
+            gsap.fromTo(
+                navs,
+                { y: '40px' },
+                { y: '0%', duration: 0.4, stagger: 0.01, ease: 'power2.out' }
+            );
+        }, 2500);
+    
+    }, [])
+    
   return (
     <div className="navbar">
         <div className="navbar-option nav-left logo">

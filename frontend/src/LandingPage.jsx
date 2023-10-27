@@ -61,40 +61,6 @@ const LandingPage = () => {
         );
 
       }, 1500);
-
-      setTimeout(() => {
-        const navs = document.querySelectorAll('.navbar-option');
-
-        gsap.fromTo(
-            navs,
-            { opacity: 0 },
-            { opacity: 1, duration: 2, stagger: 0.01, ease: 'power2.out' }
-        );
-
-        gsap.fromTo(
-            navs,
-            { y: '40px' },
-            { y: '0%', duration: 0.4, stagger: 0.01, ease: 'power2.out' }
-        );
-    }, 2500);
-
-    setTimeout(()=>{
-        const demoButton = document.querySelectorAll('.demo-button');
-
-        gsap.fromTo(
-            demoButton,
-            { opacity: 0 },
-            { opacity: 1, duration: 2, stagger: 0.01, ease: 'power2.out' }
-        );
-
-        gsap.fromTo(
-            demoButton,
-            { y: '40px' },
-            { y: '0%', duration: 0.4, stagger: 0.01, ease: 'power2.out' }
-        );
-
-    }, 2500)
-
     }, []);
     
   return (
