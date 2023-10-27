@@ -1,10 +1,9 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const { exec } = require('child_process');
-const cors = require('cors'); 
-require('dotenv').config();
+import express from 'express';
+import { exec } from 'child_process';
 
-const OpenAI = require('openai');
+import cors from 'cors';
+import OpenAI from 'openai';
+
 const openai = new OpenAI({
   apiKey : process.env.OPENAI_API_KEY,
 });
@@ -12,7 +11,7 @@ const openai = new OpenAI({
 const app = express();
 
 app.use(cors()); 
-app.use(bodyParser.json());
+app.use(express.json());
 
 // Route for GPT call
 app.post('/gpt', async (req, res) => {
