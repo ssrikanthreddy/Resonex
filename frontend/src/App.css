@@ -133,7 +133,13 @@ a {
 
 /* Dashborad Styles */
 
+<<<<<<< Updated upstream
 .page-dashboard {
+=======
+  /* Input side */
+
+.page-dashboard{
+>>>>>>> Stashed changes
   width: 63%;
   display: flex;
   flex-direction: column;
@@ -212,3 +218,52 @@ a {
 .button {
   width: 40%;
 }
+<<<<<<< Updated upstream
+=======
+
+/* Output side */
+  
+
+.graphs {
+  display: flex;
+  flex-direction: row;
+  background-color:#000000;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 45%;
+  border: 2px solid #ffffff;  
+}
+
+.probs {
+  display: flex;
+  flex-direction: row;
+  background-color:#0e424483;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 25%;
+  height: 100%;
+  border: 2px solid #ffffff;  
+}
+
+.maingraph {
+  display: flex;
+  flex-direction: row;
+  background-color:#00000083;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 75%;
+  height: 100%;
+  border: 2px solid #ffffff;  
+}
+
+
+.gptoutput {
+  background-color:#000000;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 45%;
+  border: 2px solid #ffffff;  
+}
+>>>>>>> Stashed changes
