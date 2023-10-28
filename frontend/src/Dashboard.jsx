@@ -1,24 +1,37 @@
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 const Dashboard = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Check if the current location is '/dashboard'
+    if (location.pathname === '/dashboard') {
+      document.body.style.height = '100vh';
+    } else {
+      document.body.style.height = 'auto';
+    }
+
+    // Clean up the style when the component is unmounted
+    return () => {
+      document.body.style.height = 'auto';
+    };
+  }, [location.pathname]);
+
   return (
-    <>
-      <h1>dashboard</h1>
-      <div id="dashboard">
-        <div className="input">
-          <div className="prompt-body"></div>
-          <div className="prompt-btn"></div>
+    <div className='page-dashboard'>
+      <div className='dashbar'>
+        <div className='logo'>
+          Logo
         </div>
-        <div className="output">
-          <div className="graphs">
-            <div className="probability">
-              <div className="happiness-rating"></div>
-              <div className="suicide-rating"></div>
-            </div>
-            <div className="suicide-rating"></div>
-          </div>
-          <div className="gpt-output"></div>
+        <div className='back'>
+          Back
         </div>
       </div>
-    </>
+      <div className='dashboard'>
+      </div>
+    </div>
+    
   );
 };
 
