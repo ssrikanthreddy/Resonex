@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import gsap from 'gsap';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   useEffect(() => {
@@ -36,10 +37,12 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-option nav-center">
-        <span>H</span>
-        <span>o</span>
-        <span>m</span>
-        <span>e</span>
+        <Link to="/dashboard">
+          <span>H</span>
+          <span>o</span>
+          <span>m</span>
+          <span>e</span>
+        </Link>
       </div>
 
       <a href="#features" className="navbar-option nav-center">

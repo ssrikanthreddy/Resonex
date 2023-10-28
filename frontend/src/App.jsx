@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import LandingPage from './LandingPage';
 
-
 function App() {
   const [userInput, setUserInput] = useState('');
 
@@ -16,10 +15,9 @@ function App() {
       },
       body: JSON.stringify({ userInput }),
     });
-  
+
     var data = await response.json();
     console.log(data);
-
 
     //AI STUFF
     response = await fetch('http://localhost:5500/gpt', {
@@ -29,8 +27,8 @@ function App() {
       },
       body: JSON.stringify({ userInput }),
     });
-  
-  data = await response.json();
+
+    data = await response.json();
     console.log(data);
   };
 
