@@ -54,12 +54,6 @@ a {
   text-decoration: none; /* Remove the underline */
 }
 
-.navbar-option:hover {
-  background-color: #3e3e3e;
-  border-radius: 3px;
-  transition: all 0.2s ease;
-}
-
 .navbar {
   align-items: baseline;
   justify-content: center;
