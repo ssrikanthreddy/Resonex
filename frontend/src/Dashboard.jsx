@@ -40,10 +40,6 @@ const Dashboard = () => {
           </div>
         </div>
 
-<<<<<<< Updated upstream
-        <div className="output">
-          <div className="graphs">Graphs</div>
-=======
         <div className='output'>
           
           <div className='graphs'>
@@ -62,9 +58,8 @@ const Dashboard = () => {
           <div className='gptoutput'>
             GPT
           </div>
->>>>>>> Stashed changes
 
-          <div className="gptoutput">GPT</div>
+          
         </div>
       </div>
     </div>

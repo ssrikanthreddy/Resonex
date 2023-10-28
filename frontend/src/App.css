@@ -133,13 +133,9 @@ a {
 
 /* Dashborad Styles */
 
-<<<<<<< Updated upstream
-.page-dashboard {
-=======
   /* Input side */
 
 .page-dashboard{
->>>>>>> Stashed changes
   width: 63%;
   display: flex;
   flex-direction: column;
@@ -218,8 +214,6 @@ a {
 .button {
   width: 40%;
 }
-<<<<<<< Updated upstream
-=======
 
 /* Output side */
   
@@ -266,4 +260,3 @@ a {
   height: 45%;
   border: 2px solid #ffffff;  
 }
->>>>>>> Stashed changes
