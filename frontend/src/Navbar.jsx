@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   useEffect(() => {
     setTimeout(() => {
-      const navs = document.querySelectorAll('.navbar-option');
+      const navs = document.querySelectorAll('.navbar-option, .nav-center');
 
       gsap.fromTo(
         navs,

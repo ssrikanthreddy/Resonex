@@ -91,6 +91,7 @@ a {
 }
 
 .nav-center {
+  opacity: 0;
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -115,6 +116,7 @@ a {
 }
 
 .demo-button {
+  opacity: 0;
   margin: 2.5vh 0vh 40vh;
   font-family: 'Poppins';
   padding: 10px 15px;
