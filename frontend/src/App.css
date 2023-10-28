@@ -38,6 +38,7 @@ a {
 }
 
 .tagline {
+  font-size: 2.2vw;
   font-family: 'Poppins';
   font-weight: 400;
 }
@@ -112,7 +113,7 @@ a {
 
 .demo-button {
   opacity: 0;
-  margin: 2.5vh 0vh 40vh;
+  margin: 12vh 0vh 40vh;
   font-family: 'Poppins';
   padding: 10px 15px;
   font-size: 1rem;
@@ -141,7 +142,7 @@ a {
 
 .dashbar{
   font-weight: bold;
-  width: 100%;
+  width: 99%;
   justify-content: space-evenly;
   flex-wrap: wrap;
   display: flex;
@@ -149,23 +150,59 @@ a {
   justify-content: space-between;
   align-self: center;
   background-color:#00000000; /* Set your desired background color */
-  padding: 20px;
+  padding: 2vh 1vh 4vh;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  opacity: 0.5 ;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  opacity: 1;
 }
 
 .dashboard {
   width: 100%;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  background-color:#00000000; /* Set your desired background color */
+  border-radius: 10px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  height: 80vh;
+  opacity: 1 ;
+}
+
+.input, .output {
   display: flex;
   flex-direction: column;
-  align-self: center;
+  justify-content: space-between;
+  width: 46%;
+  background-color:#00000075; /* Set your desired background color */
+  
+  border-radius: 10px;
+  border: 2px solid #ffffff;  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+}
+
+.inbox {
+  height: 60%;
+  width: 100%;
   background-color:#000000; /* Set your desired background color */
-  padding: 20px;
+  padding: 0vw 0vw 0vw;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 80vh;
-  opacity: 0.5 ;
+}
+
+.buttons {
+  padding: 1vw 0vw 1vw;
+  display: flex;
+  flex-direction: row;
+  height: 10%;
+  width: 100%;
+  background-color:#000000; /* Set your desired background color */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+  width: 40%;
 }

@@ -20,6 +20,7 @@ const Dashboard = () => {
 
   return (
     <div className='page-dashboard'>
+
       <div className='dashbar'>
         <div className='logo'>
           Logo
@@ -28,8 +29,37 @@ const Dashboard = () => {
           Back
         </div>
       </div>
+
       <div className='dashboard'>
+        <div className='input'>
+
+          <div className='inbox'>
+
+            <div class='prompt'>Hello How are you</div>
+            <div className='input'>
+              <input type="text" placeholder="Search..." />
+            </div>
+
+          </div>
+
+          <div className='buttons'>
+            <button className='button seranos'>
+              Seranos
+            </button>
+            <button className='button theralyse'>
+              Theralyse
+            </button>
+          </div>
+          
+        </div>
+
+        <div className='output'>
+          
+          
+
+        </div>
       </div>
+
     </div>
     
   );
