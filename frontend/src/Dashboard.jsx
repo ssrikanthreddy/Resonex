@@ -55,7 +55,13 @@ const Dashboard = () => {
 
         <div className='output'>
           
-          
+          <div className='graphs'>
+            Graphs
+          </div>
+
+          <div className='gptoutput'>
+            GPT
+          </div>
 
         </div>
       </div>
