@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import LandingPage from './LandingPage';
+import { useState } from 'react';
 
 function App() {
   const [userInput, setUserInput] = useState('');

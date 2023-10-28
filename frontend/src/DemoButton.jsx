@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import gsap from 'gsap';
+import { Link } from 'react-router-dom';
 
 const DemoButton = () => {
   const handleClick = () => {
@@ -28,7 +29,7 @@ const DemoButton = () => {
   return (
     <>
       <button className="demo-button" onClick={handleClick}>
-        View Demo
+        <Link to="/dashboard">View Demo</Link>
       </button>
     </>
   );

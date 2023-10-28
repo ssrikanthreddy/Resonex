@@ -67,10 +67,12 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-option nav-right">
-          <span>D</span>
-          <span>e</span>
-          <span>m</span>
-          <span>o</span>
+          <Link to="/dashboard">
+            <span>D</span>
+            <span>e</span>
+            <span>m</span>
+            <span>o</span>
+          </Link>
         </div>
         {/* Add more options as needed */}
       </div>
