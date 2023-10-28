@@ -40,8 +40,29 @@ const Dashboard = () => {
           </div>
         </div>
 
+<<<<<<< Updated upstream
         <div className="output">
           <div className="graphs">Graphs</div>
+=======
+        <div className='output'>
+          
+          <div className='graphs'>
+
+            <div className='probs'>
+              <div>Prob1</div>
+              <div>Prob2</div>
+            </div>
+
+            <div className='maingraph'>
+              <div>Main Graph</div>
+            </div>
+
+          </div>
+
+          <div className='gptoutput'>
+            GPT
+          </div>
+>>>>>>> Stashed changes
 
           <div className="gptoutput">GPT</div>
         </div>
