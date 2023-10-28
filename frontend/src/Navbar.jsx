@@ -24,17 +24,8 @@ const Navbar = () => {
   return (
     <div className="nav">
       <div className="navbar">
-        <div className="navbar-option nav-left logo">
-          <span>R</span>
-          <span>e</span>
-          <span>s</span>
-          <span>o</span>
-          <span>n</span>
-          <span>e</span>
-          <span>x</span>
-          <span>.</span>
-          <span>A</span>
-          <span>I</span>
+        <div className="navbar-option nav-left">
+        <div className="logo"></div>
         </div>
         <div className="nav-center">
           <div className="navbar-option">

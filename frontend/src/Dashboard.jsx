@@ -21,8 +21,9 @@ const Dashboard = () => {
   return (
     <div className="page-dashboard">
       <div className="dashbar">
-        <div className="logo">Logo</div>
-        <div className="back">Back</div>
+        <div className="logo"></div>
+        <div className="title">Dashboard</div>
+        <button className="back">Back</button>
       </div>
 
       <div className="dashboard">
