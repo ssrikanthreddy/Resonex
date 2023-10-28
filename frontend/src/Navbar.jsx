@@ -22,61 +22,58 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="navbar">
-      <div className="navbar-option nav-left logo">
-        <span>R</span>
-        <span>e</span>
-        <span>s</span>
-        <span>o</span>
-        <span>n</span>
-        <span>e</span>
-        <span>x</span>
-        <span>.</span>
-        <span>A</span>
-        <span>I</span>
-      </div>
-
-      <div className="navbar-option nav-center">
-        <Link to="/dashboard">
-          <span>H</span>
-          <span>o</span>
-          <span>m</span>
+    <div className="nav">
+      <div className="navbar">
+        <div className="navbar-option nav-left logo">
+          <span>R</span>
           <span>e</span>
-        </Link>
-      </div>
+          <span>s</span>
+          <span>o</span>
+          <span>n</span>
+          <span>e</span>
+          <span>x</span>
+          <span>.</span>
+          <span>A</span>
+          <span>I</span>
+        </div>
+        <div className="nav-center">
+          <div className="navbar-option">
+            <Link to="/dashboard">
+              <span>H</span>
+              <span>o</span>
+              <span>m</span>
+              <span>e</span>
+            </Link>
+          </div>
 
-      <a href="#features" className="navbar-option nav-center">
-        <span>F</span>
-        <span>e</span>
-        <span>a</span>
-        <span>t</span>
-        <span>u</span>
-        <span>r</span>
-        <span>e</span>
-        <span>s</span>
-      </a>
+          <a href="#features" className="navbar-option">
+            <span>F</span>
+            <span>e</span>
+            <span>a</span>
+            <span>t</span>
+            <span>u</span>
+            <span>r</span>
+            <span>e</span>
+            <span>s</span>
+          </a>
 
-      <div className="navbar-option nav-center">
-        <span>A</span>
-        <span>b</span>
-        <span>o</span>
-        <span>u</span>
-        <span>t</span>
-      </div>
+          <div className="navbar-option">
+            <span>A</span>
+            <span>b</span>
+            <span>o</span>
+            <span>u</span>
+            <span>t</span>
+          </div>
+        </div>
 
-      <div className="navbar-option nav-right">
-        <span>R</span>
-        <span>e</span>
-        <span>s</span>
-        <span>o</span>
-        <span>n</span>
-        <span>e</span>
-        <span>x</span>
-        <span>.</span>
-        <span>A</span>
-        <span>I</span>
+        <div className="navbar-option nav-right">
+          <span>D</span>
+          <span>e</span>
+          <span>m</span>
+          <span>o</span>
+        </div>
+        {/* Add more options as needed */}
       </div>
-      {/* Add more options as needed */}
     </div>
   );
 };

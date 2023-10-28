@@ -3,6 +3,7 @@
   display: flex;
   width: 100%;
 }
+
 a {
   color: white !important;
 }
@@ -11,14 +12,13 @@ a {
   overflow: auto;
   scroll-behavior: smooth;
   position: relative;
-  width: 60%;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
- 
   /* background-image: url('./assets/grad.jpeg'); */
-  background-size: cover;
+  /* background-size: cover; */
   overflow: hidden;
 }
 
@@ -29,11 +29,16 @@ a {
   justify-content: space-between;
   height: 20%;
   font-family: 'Poppins';
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1.7vw;
   color: #fff;
   margin-top: 2px;
   opacity: 1;
+}
+
+.tagline {
+  font-family: 'Poppins';
+  font-weight: 400;
 }
 
 .landing-text span {
@@ -44,25 +49,41 @@ a {
   width: 0.25em;
 }
 
+a {
+  text-decoration: none; /* Remove the underline */
+}
+
+.navbar-option:hover {
+  background-color: #3e3e3e;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+}
 
 .navbar {
+  align-items: baseline;
   justify-content: center;
-  margin: 4vh 0vh 0vh;
+  margin: 3vh 0vh 0vh;
   padding: 0vh 3vh 0vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   display: flex;
   flex-direction: row;
-  height: 10%; 
-  width: 100%;
+  width: 70%;
+}
+
+.nav {
+  z-index: 999;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar-option {
   font-size: 1vw;
   font-family: 'Poppins';
-  font-weight: 400 ;
+  font-weight: 400;
   opacity: 0;
   width: 100%;
+  margin: 0 1.5rem;
 }
 
 .nav-left {
@@ -70,13 +91,22 @@ a {
 }
 
 .nav-center {
+  display: flex;
+  justify-content: space-between;
   text-align: center;
+  border-radius: 30px;
+  padding: 15px;
+  filter: drop-shadow(0px 2px 15px rgba(0, 0, 0, 0.6));
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  background: rgba(32, 32, 32, 0.85);
+  z-index: 9;
+  /* height: max-content; */
 }
 
 .nav-right {
   text-align: right;
 }
-
 
 .name {
   margin-top: 25vh;
@@ -85,16 +115,20 @@ a {
 }
 
 .demo-button {
-  margin: 17vh 0vh 40vh;
+  margin: 2.5vh 0vh 40vh;
   font-family: 'Poppins';
-  font-size: 1.47vw;
-  border-radius: 20px;
-  opacity: 0;
-  /* background: linear-gradient(to left, #360033, #175c98);  */
-  background-size: cover;
-  border: solid rgb(255, 255, 255) 2px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 40px;
+  filter: drop-shadow(0px 2px 15px rgba(0, 0, 0, 0.1));
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  background: rgba(32, 32, 32, 0.85);
+  outline: none;
+  border: 0;
 }
 
-.features-container h2, .features-container li {
+.features-container h2,
+.features-container li {
   opacity: 0;
 }

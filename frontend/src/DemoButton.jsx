@@ -26,9 +26,12 @@ const DemoButton = () => {
   }, []);
 
   return (
-    <button className="demo-button" onClick={handleClick}>
-      View Demo
-    </button>
+    <>
+      <button className="demo-button" onClick={handleClick}>
+        View Demo
+      </button>
+      <button className="yolo">YOLO</button>
+    </>
   );
 };
 
