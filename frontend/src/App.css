@@ -94,6 +94,7 @@ nav ul li {
 }
 
 .title {
+  
   display: flex;
   justify-content: space-between;
   height: 20%;
@@ -107,7 +108,9 @@ nav ul li {
   opacity: 0;
 }
 
+
 .name {
+  opacity: 1;
   margin: 0rem 0 1rem 0;
   font-size: 8rem;
 }
@@ -122,7 +125,7 @@ nav ul li {
 }
 
 .demo-button {
-  margin: 2.5rem 0rem 10rem;
+  margin: 5rem 0rem 10rem;
   font-size: 1rem;
   opacity: 0;
   border: 0;
@@ -174,7 +177,7 @@ nav ul li {
   background-position: center;
 }
 
-.title,
+
 .back {
   padding-top: 3vh;
 }

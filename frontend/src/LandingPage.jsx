@@ -20,23 +20,30 @@ const LandingPage = () => {
   requestAnimationFrame(raf);
 
   useEffect(() => {
-    setTimeout(() => {
-      const elements = document.querySelectorAll('.name span');
+    const text = document.querySelector('.name');
+    const letters = text.textContent.split('');  
+    text.textContent = '';
+    setTimeout(()=> {
 
-      gsap.fromTo(
-        elements,
-        { opacity: 0 },
-        { opacity: 1, duration: 2, stagger: 0.01, ease: 'power2.out' }
-      );
+      letters.forEach((letter, index) => {
+        const delay = 0.1 * index;
 
-      gsap.fromTo(
-        elements,
-        { y: '40px' },
-        { y: '0%', duration: 0.4, stagger: 0.01, ease: 'power2.out' }
-      );
-    }, 1000);
+        setTimeout(() => {
+          text.textContent += letter;
+        }, delay * 600); // Multiply by 1000 to convert seconds to milliseconds
 
-    setTimeout(() => {
+        gsap.fromTo(
+          text,
+          { opacity: 0 },
+          { opacity: 1, duration: 4, stagger: 0.01, ease: 'ease' }
+        );
+      });
+
+    }, 1000)
+    
+
+    setTimeout(()=>{
+
       const elements = document.querySelectorAll('.tagline span');
 
       gsap.fromTo(
@@ -44,13 +51,13 @@ const LandingPage = () => {
         { opacity: 0 },
         { opacity: 1, duration: 2, stagger: 0.01, ease: 'power2.out' }
       );
-
       gsap.fromTo(
         elements,
         { y: '40px' },
         { y: '0%', duration: 0.4, stagger: 0.01, ease: 'power2.out' }
       );
-    }, 1500);
+
+    }, 2000)
   }, []);
 
   return (
@@ -59,16 +66,7 @@ const LandingPage = () => {
         <Navbar />
         <div className="title-container">
           <h1 className="title name">
-            <span>R</span>
-            <span>e</span>
-            <span>s</span>
-            <span>o</span>
-            <span>n</span>
-            <span>e</span>
-            <span>x</span>
-            <span>.</span>
-            <span>A</span>
-            <span>I</span>
+            Resonex.AI
           </h1>
           <h2 className="title tagline">
             <span>Y</span>
