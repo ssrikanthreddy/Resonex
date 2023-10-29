@@ -20,26 +20,24 @@ const LandingPage = () => {
   requestAnimationFrame(raf);
 
   useEffect(() => {
-    const text = document.querySelector('.name');
-    const letters = text.textContent.split('');  
-    text.textContent = '';
-    setTimeout(()=> {
 
-      letters.forEach((letter, index) => {
-        const delay = 0.1 * index;
+    setTimeout(()=>{
 
-        setTimeout(() => {
-          text.textContent += letter;
-        }, delay * 600); // Multiply by 1000 to convert seconds to milliseconds
+      const elements = document.querySelectorAll('.name');
 
-        gsap.fromTo(
-          text,
-          { opacity: 0 },
-          { opacity: 1, duration: 4, stagger: 0.01, ease: 'ease' }
-        );
-      });
+      gsap.fromTo(
+        elements,
+        { opacity: 0 },
+        { opacity: 1, duration: 2, stagger: 0.01, ease: 'power2.out' }
+      );
+      gsap.fromTo(
+        elements,
+        { y: '40px' },
+        { y: '0%', duration: 0.4, stagger: 0.01, ease: 'power2.out' }
+      );
 
     }, 1000)
+    
     
 
     setTimeout(()=>{
@@ -57,7 +55,7 @@ const LandingPage = () => {
         { y: '0%', duration: 0.4, stagger: 0.01, ease: 'power2.out' }
       );
 
-    }, 2000)
+    }, 1500)
   }, []);
 
   return (
