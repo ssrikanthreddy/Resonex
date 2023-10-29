@@ -17,12 +17,12 @@ const Dashboard = () => {
       document.body.style.height = 'auto';
     };
   }, [location.pathname]);
-
+  
   return (
     <div className="page-dashboard">
 
       <div className="dashbar">
-        <div className="logo"></div>
+        <div className="logo-dash"></div>
         <div className="title">Dashboard</div>
         <button className="back">Back</button>
       </div>
@@ -30,7 +30,7 @@ const Dashboard = () => {
       <div className="dashboard">
 
         <div className="input">
-          
+
           <div className="inbox">
             <div className="prompt">Hello How are you</div>
             <div className="input">
