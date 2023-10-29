@@ -1,14 +1,8 @@
-import { useEffect } from "react";
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+
 
 const Output = () => {
-
-
-
-
-
-
-
-
 
 
 
@@ -17,13 +11,20 @@ const Output = () => {
         
         <div className='graphs'>
 
-            <div className='probs'>
-            <div>Prob1</div>
-            <div>Prob2</div>
+            <div className='side-graphs'>
+            <div className="happy-graph">
+                <CircularProgressbar value={50} text={`${50}%`} />
+            </div>
+
+            <div className="sad-graph">
+                <CircularProgressbar value={50} text={`${50}%`} />
+            </div>
             </div>
 
             <div className='maingraph'>
-            <div>Main Graph</div>
+                <div className="main-graph-container">
+                    <CircularProgressbar value={50} text={`${50}%`} />
+                </div>
             </div>
 
         </div>
