@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Inbox from './Inbox';
+import Output from './Output';
 
 const Dashboard = () => {
   const handleSubmit = (buttonClicked) => {
@@ -44,26 +45,9 @@ const Dashboard = () => {
         </div>
 
         <div className='output'>
-          
-          <div className='graphs'>
-
-            <div className='probs'>
-              <div>Prob1</div>
-              <div>Prob2</div>
-            </div>
-
-            <div className='maingraph'>
-              <div>Main Graph</div>
-            </div>
-
-          </div>
-
-          <div className='gptoutput'>
-            GPT
-          </div>
-
-          
+          <Output/>
         </div>
+
       </div>
     </div>
   );
