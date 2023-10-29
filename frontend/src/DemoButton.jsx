@@ -3,11 +3,6 @@ import gsap from 'gsap';
 import { Link } from 'react-router-dom';
 
 const DemoButton = () => {
-  const handleClick = () => {
-    // Add your logic for handling button click here
-    // This function will be executed when the button is clicked
-  };
-
   useEffect(() => {
     setTimeout(() => {
       const demoButton = document.querySelectorAll('.demo-button');
@@ -27,11 +22,9 @@ const DemoButton = () => {
   }, []);
 
   return (
-    <>
-      <button className="demo-button" onClick={handleClick}>
-        <Link to="/dashboard">View Demo</Link>
-      </button>
-    </>
+    <button className="demo-button">
+      <Link to="/dashboard">View Demo</Link>
+    </button>
   );
 };
 

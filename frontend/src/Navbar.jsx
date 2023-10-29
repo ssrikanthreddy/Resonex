@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   useEffect(() => {
     setTimeout(() => {
-      const navs = document.querySelectorAll('.navbar-option, .nav-center');
+      const navs = document.querySelectorAll('.nav-elements');
 
       gsap.fromTo(
         navs,
@@ -22,52 +22,50 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="nav">
-      <div className="navbar">
-        <div className="navbar-option nav-left">
-        <div className="logo"></div>
-        </div>
-        <div className="nav-center">
-          <div className="navbar-option">
-            <Link to="/dashboard">
-              <span>H</span>
-              <span>o</span>
-              <span>m</span>
-              <span>e</span>
-            </Link>
-          </div>
-
-          <a href="#features" className="navbar-option">
-            <span>F</span>
-            <span>e</span>
-            <span>a</span>
-            <span>t</span>
-            <span>u</span>
-            <span>r</span>
-            <span>e</span>
-            <span>s</span>
-          </a>
-
-          <div className="navbar-option">
-            <span>A</span>
-            <span>b</span>
-            <span>o</span>
-            <span>u</span>
-            <span>t</span>
-          </div>
-        </div>
-
-        <div className="navbar-option nav-right">
-          <Link to="/dashboard">
-            <span>D</span>
-            <span>e</span>
-            <span>m</span>
-            <span>o</span>
-          </Link>
-        </div>
-        {/* Add more options as needed */}
+    <nav>
+      <div className="nav-elements">
+        <img className="logo" src="./src/assets/ResonexLogo.png" alt="Logo" />
       </div>
-    </div>
+      <div className="nav-elements nav-center">
+        <ul className="nav-links">
+          <li>
+            <a href="#features">
+              <span>F</span>
+              <span>e</span>
+              <span>a</span>
+              <span>t</span>
+              <span>u</span>
+              <span>r</span>
+              <span>e</span>
+              <span>s</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about">
+              <span>A</span>
+              <span>b</span>
+              <span>o</span>
+              <span>u</span>
+              <span>t</span>
+            </a>
+          </li>
+          <li>
+            <a href="#faq">
+              <span>F</span>
+              <span>A</span>
+              <span>Q</span>
+              <span>&apos;</span>
+              <span>s</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div className="nav-elements nav-right">
+        <button className="btn">
+          <Link to="/dashboard">Demo</Link>
+        </button>
+      </div>
+    </nav>
   );
 };
 

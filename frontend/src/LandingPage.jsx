@@ -55,72 +55,69 @@ const LandingPage = () => {
 
   return (
     <>
-      <div className="landing-container">
+      <section id="hero">
         <Navbar />
-
-        <h1 className="landing-text name">
-          <span>R</span>
-          <span>e</span>
-          <span>s</span>
-          <span>o</span>
-          <span>n</span>
-          <span>e</span>
-          <span>x</span>
-          <span>.</span>
-          <span>A</span>
-          <span>I</span>
-        </h1>
-        <h1 className="landing-text tagline">
-          <span>Y</span>
-          <span>o</span>
-          <span>u</span>
-          <span>r</span>
-          <span className="space"> </span>
-          <span>S</span>
-          <span>h</span>
-          <span>i</span>
-          <span>e</span>
-          <span>l</span>
-          <span>d</span>
-          <span className="space"> </span>
-          <span>A</span>
-          <span>g</span>
-          <span>a</span>
-          <span>i</span>
-          <span>n</span>
-          <span>s</span>
-          <span>t</span>
-          <span className="space"> </span>
-          <span>D</span>
-          <span>i</span>
-          <span>g</span>
-          <span>i</span>
-          <span>t</span>
-          <span>a</span>
-          <span>l</span>
-          <span className="space"> </span>
-          <span>D</span>
-          <span>i</span>
-          <span>s</span>
-          <span>t</span>
-          <span>r</span>
-          <span>e</span>
-          <span>s</span>
-          <span>s</span>
-        </h1>
-
-        <DemoButton />
-
+        <div className="title-container">
+          <h1 className="title name">
+            <span>R</span>
+            <span>e</span>
+            <span>s</span>
+            <span>o</span>
+            <span>n</span>
+            <span>e</span>
+            <span>x</span>
+            <span>.</span>
+            <span>A</span>
+            <span>I</span>
+          </h1>
+          <h2 className="title tagline">
+            <span>Y</span>
+            <span>o</span>
+            <span>u</span>
+            <span>r</span>
+            <span className="space"> </span>
+            <span>S</span>
+            <span>h</span>
+            <span>i</span>
+            <span>e</span>
+            <span>l</span>
+            <span>d</span>
+            <span className="space"> </span>
+            <span>A</span>
+            <span>g</span>
+            <span>a</span>
+            <span>i</span>
+            <span>n</span>
+            <span>s</span>
+            <span>t</span>
+            <span className="space"> </span>
+            <span>D</span>
+            <span>i</span>
+            <span>g</span>
+            <span>i</span>
+            <span>t</span>
+            <span>a</span>
+            <span>l</span>
+            <span className="space"> </span>
+            <span>D</span>
+            <span>i</span>
+            <span>s</span>
+            <span>t</span>
+            <span>r</span>
+            <span>e</span>
+            <span>s</span>
+            <span>s</span>
+          </h2>
+          <DemoButton />
+        </div>
+      </section>
+      <section id="features">
         <div className="col">
           <Features />
           <Features />
           <Features />
-          <Features />
-          <Features />
-          <Features />
-          <Features />
         </div>
-      </div>
+      </section>
     </>
   );
 };
