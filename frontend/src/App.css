@@ -17,6 +17,7 @@ section {
 }
 
 #hero {
+  margin-top: 7.3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,13 +26,14 @@ section {
 }
 
 nav {
+  top: 36px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  margin-top: 15px;
+  /* margin-top: 15px; */
   margin-bottom: 5rem;
-  /* position: fixed; */
+  position: fixed;
   z-index: 999;
   flex: 1;
 }
