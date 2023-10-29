@@ -4,17 +4,18 @@ import { exec } from 'child_process';
 import cors from 'cors';
 import OpenAI from 'openai';
 
+
 const openai = new OpenAI({
   apiKey : process.env.OPENAI_API_KEY,
 });
 
 const app = express();
-
 app.use(cors()); 
+
 app.use(express.json());
 
 // Route for GPT call
-app.post('/gpt', async (req, res) => {
+app.post('/theralyse', async (req, res) => {
   const userInput = req.body.userInput;
 
   try {
@@ -45,7 +46,8 @@ app.post('/gpt', async (req, res) => {
 });
 
 // Route for suicide.py call
-app.post('/suicide', (req, res) => {
+app.post('/seranos', (req, res) => {
+  
   const userInput = req.body.userInput;
 
   exec(`python3 suicide.py "${userInput}"`, (error, stdout, stderr) => {
