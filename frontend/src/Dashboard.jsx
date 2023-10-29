@@ -1,9 +1,19 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import Inbox from './Inbox';
 
 const Dashboard = () => {
+  const handleSubmit = (buttonClicked) => {
+    if (buttonClicked === 'seranos') {
+      // Handle 'seranos' button click
+      console.log('Seranos button clicked');
+    } else if (buttonClicked === 'theralyse') {
+      // Handle 'theralyse' button click
+      console.log('Theralyse button clicked');
+    }
+  };
+  
   const location = useLocation();
-
   useEffect(() => {
     // Check if the current location is '/dashboard'
     if (location.pathname === '/dashboard') {
@@ -30,19 +40,7 @@ const Dashboard = () => {
       <div className="dashboard">
 
         <div className="input">
-
-          <div className="inbox">
-            <div className="prompt">Hello How are you</div>
-            <div className="input">
-              <input type="text" placeholder="Search..." />
-            </div>
-          </div>
-
-          <div className="buttons">
-            <button className="button seranos">Seranos</button>
-            <button className="button theralyse">Theralyse</button>
-          </div>
-
+        <Inbox />
         </div>
 
         <div className='output'>
