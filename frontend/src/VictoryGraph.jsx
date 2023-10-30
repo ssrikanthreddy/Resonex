@@ -1,42 +1,32 @@
-import React, { Component } from 'react';
+import React, { Component} from 'react';
 import { VictoryPie, VictoryAnimation, VictoryLabel } from 'victory';
-
-var number = 0;
 
 const getColorByPercentage = (percentage) => {
   const hue = ((100 - percentage) * 1.2) / 360;
   return `hsl(${hue * 360}, 100%, 50%)`;
 };
 
-class VictoryCircle extends Component {
-  
+
+class VictoryGraph extends React.Component {
   constructor() {
     super();
     this.state = {
       percent: 25, data: this.getData(0)
     };
   }
-
-  componentWillUnmount() {
-    window.clearInterval(this.setStateInterval);
-  }
-
   getData(percent) {
     return [{ x: 1, y: percent }, { x: 2, y: 100 - percent }];
   }
 
-  updateData = (percent) => { 
-    number = Math.round(percent);
-    console.log(number)
-    console.log("Update called");
+  updateData = (targetPercent) => {
+    const newPercent = targetPercent; 
     this.setState({
-      percent,
-      data: this.getData(percent)
+      percent: newPercent,
+      data: this.getData(newPercent)
     });
   }
 
   render() {
-
     return (
       <div>
         <svg viewBox="0 0 400 400" width="100%" height="100%">
@@ -51,19 +41,18 @@ class VictoryCircle extends Component {
             style={{
               data: { fill: ({ datum }) => {
                 const color = getColorByPercentage(datum.y);
-                return datum.x === 1 ? color : "transparent";
+                return datum.x === 1 ? color : "white";
               }
-              },
-              
+              }
             }}
           />
           <VictoryAnimation duration={1000} data={this.state}>
-            {(newProps) => {
+            {() => {
               return (
                 <VictoryLabel
                   textAnchor="middle" verticalAnchor="middle"
                   x={200} y={200}
-                  text={`${number}%`}
+                  text={`${Math.round(this.state.percent)}%`}
                   style={{ fontSize: 45 }}
                 />
               );
@@ -75,4 +64,4 @@ class VictoryCircle extends Component {
   }
 }
 
-export default VictoryCircle;
+export default VictoryGraph;
