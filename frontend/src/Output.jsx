@@ -15,7 +15,7 @@ const Output = ({targetPercent}) => {
               Probability
             </h3>
             <div className="small-circle">
-              <CircularProgressbar value={50} text={`${50}%`} />
+            <CircleGraph targetPercent={targetPercent}/>
             </div>
           </div>
 
@@ -25,7 +25,7 @@ const Output = ({targetPercent}) => {
               Probability
             </h3>
             <div className="small-circle">
-              <CircularProgressbar value={50} text={`${50}%`} />
+            <CircleGraph targetPercent={targetPercent}/>
             </div>
           </div>
         </div>
