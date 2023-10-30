@@ -12,7 +12,7 @@ const Output = ({targetPercent}) => {
           <div className="happy">
             <h3>
               Happiness <br />
-              Probability
+              Rating
             </h3>
             <div className="small-circle">
             <CircleGraph targetPercent={targetPercent}/>
@@ -21,8 +21,8 @@ const Output = ({targetPercent}) => {
 
           <div className="suicide">
             <h3>
-              Suicide <br />
-              Probability
+              Depression <br />
+              Rating
             </h3>
             <div className="small-circle">
             <CircleGraph targetPercent={targetPercent}/>
