@@ -1,10 +1,10 @@
 import express from 'express';
 import { exec } from 'child_process';
-
 import cors from 'cors';
 import OpenAI from 'openai';
 
-
+import { config } from 'dotenv';
+config();
 const openai = new OpenAI({
   apiKey : process.env.OPENAI_API_KEY,
 });
@@ -57,7 +57,7 @@ app.post('/seranos', (req, res) => {
       return;
     }
     const output = stdout.trim();
-    console.log(`Output from Python script: ${output}`);
+    console.log(`${output}`);
     res.json({ result: output });
   });
 });

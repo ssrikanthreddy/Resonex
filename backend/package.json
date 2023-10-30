@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "proxy": "http://localhost:5000",
+  "proxy": "http://localhost:5500",
   "dependencies": {
     "body-parser": "^1.20.2",
     "child_process": "^1.0.2",
