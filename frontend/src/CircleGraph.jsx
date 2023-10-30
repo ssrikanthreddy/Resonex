@@ -7,8 +7,6 @@ function CircleGraph({targetPercent}) {
   useEffect(() => { 
     victoryGraphRef.current.updateData(targetPercent);
     
-    console.log('Value changed to:', targetPercent);
-    // Perform your action here
   }, [targetPercent]);
 
 

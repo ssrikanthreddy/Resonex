@@ -1,4 +1,4 @@
-const Inbox = () => {
+const Inbox = ({setTargetPercent}) => {
   const handleSubmit = async (buttonName) => {
     const formData = new FormData(document.getElementById('myForm'));
     const userInput = formData.get('feels');
@@ -17,7 +17,9 @@ const Inbox = () => {
     });
 
     const data = await response.json();
-    console.log(data);
+    console.log(data.result);
+    setTargetPercent(parseFloat(data.result))
+
   };
 
   const formSubmit = (e) => {
@@ -32,7 +34,7 @@ const Inbox = () => {
           <form id="myForm" onSubmit={formSubmit}>
             <textarea
               className="feeling"
-              name="feeling"
+              name="feels"
               type="text"
               placeholder="I am thinking of ending things..."
             />

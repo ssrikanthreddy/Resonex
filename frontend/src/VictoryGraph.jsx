@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import { VictoryPie, VictoryAnimation, VictoryLabel } from 'victory';
 
+var number = 0;
+
+const getColorByPercentage = (percentage) => {
+  const hue = ((100 - percentage) * 1.2) / 360;
+  return `hsl(${hue * 360}, 100%, 50%)`;
+};
+
 class VictoryCircle extends Component {
+  
   constructor() {
     super();
     this.state = {
@@ -17,7 +25,9 @@ class VictoryCircle extends Component {
     return [{ x: 1, y: percent }, { x: 2, y: 100 - percent }];
   }
 
-  updateData = (percent) => {
+  updateData = (percent) => { 
+    number = Math.round(percent);
+    console.log(number)
     console.log("Update called");
     this.setState({
       percent,
@@ -40,10 +50,11 @@ class VictoryCircle extends Component {
             labels={() => null}
             style={{
               data: { fill: ({ datum }) => {
-                const color = datum.y > 30 ? "red" : "green";
+                const color = getColorByPercentage(datum.y);
                 return datum.x === 1 ? color : "transparent";
               }
-              }
+              },
+              
             }}
           />
           <VictoryAnimation duration={1000} data={this.state}>
@@ -52,7 +63,7 @@ class VictoryCircle extends Component {
                 <VictoryLabel
                   textAnchor="middle" verticalAnchor="middle"
                   x={200} y={200}
-                  text={`${Math.round(newProps.percent)}%`}
+                  text={`${number}%`}
                   style={{ fontSize: 45 }}
                 />
               );

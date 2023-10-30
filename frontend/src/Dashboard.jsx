@@ -1,18 +1,12 @@
-import { useEffect } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import Inbox from './Inbox';
 import Output from './Output';
 
 const Dashboard = () => {
-  // const handleSubmit = (buttonClicked) => {
-  //   if (buttonClicked === 'seranos') {
-  //     // Handle 'seranos' button click
-  //     console.log('Seranos button clicked');
-  //   } else if (buttonClicked === 'theralyse') {
-  //     // Handle 'theralyse' button click
-  //     console.log('Theralyse button clicked');
-  //   }
-  // };
+
+  const [targetPercent, setTargetPercent] = useState(50)
+  
 
   const location = useLocation();
   useEffect(() => {
@@ -37,11 +31,11 @@ const Dashboard = () => {
 
       <div className="dashboard">
         <div className="input">
-          <Inbox />
+          <Inbox setTargetPercent={setTargetPercent}/>
         </div>
 
         <div className="output">
-          <Output />
+          <Output targetPercent={targetPercent}/>
         </div>
       </div>
     </div>

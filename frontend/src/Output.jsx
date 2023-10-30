@@ -1,7 +1,10 @@
+
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import CircleGraph from './CircleGraph';
 
-const Output = () => {
+const Output = ({targetPercent}) => {
+
   return (
     <>
       <div className="graphs">
@@ -30,7 +33,7 @@ const Output = () => {
         <div className="risk-rating">
           <h3>Suicide Risk Rating</h3>
           <div className="lg-circle">
-            <CircularProgressbar value={50} text={`${50}%`} />
+            <CircleGraph targetPercent={targetPercent}/>
           </div>
         </div>
       </div>
