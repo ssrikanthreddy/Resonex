@@ -4,16 +4,16 @@ import Inbox from './Inbox';
 import Output from './Output';
 
 const Dashboard = () => {
-  const handleSubmit = (buttonClicked) => {
-    if (buttonClicked === 'seranos') {
-      // Handle 'seranos' button click
-      console.log('Seranos button clicked');
-    } else if (buttonClicked === 'theralyse') {
-      // Handle 'theralyse' button click
-      console.log('Theralyse button clicked');
-    }
-  };
-  
+  // const handleSubmit = (buttonClicked) => {
+  //   if (buttonClicked === 'seranos') {
+  //     // Handle 'seranos' button click
+  //     console.log('Seranos button clicked');
+  //   } else if (buttonClicked === 'theralyse') {
+  //     // Handle 'theralyse' button click
+  //     console.log('Theralyse button clicked');
+  //   }
+  // };
+
   const location = useLocation();
   useEffect(() => {
     // Check if the current location is '/dashboard'
@@ -28,26 +28,21 @@ const Dashboard = () => {
       document.body.style.height = 'auto';
     };
   }, [location.pathname]);
-  
+
   return (
     <div className="page-dashboard">
-
       <div className="dashbar">
         <div className="logo-dash"></div>
-        <div className="title">Dashboard</div>
-        <button className="back">Back</button>
       </div>
 
       <div className="dashboard">
-
         <div className="input">
-        <Inbox />
+          <Inbox />
         </div>
 
-        <div className='output'>
-          <Output/>
+        <div className="output">
+          <Output />
         </div>
-
       </div>
     </div>
   );

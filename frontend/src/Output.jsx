@@ -1,41 +1,41 @@
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
-
 const Output = () => {
-
-
-
-    return (
-        <>
-        
-        <div className='graphs'>
-
-            <div className='side-graphs'>
-            <div className="happy-graph">
-                <CircularProgressbar value={50} text={`${50}%`} />
+  return (
+    <>
+      <div className="graphs">
+        <div className="probabilities">
+          <div className="happy">
+            <h3>
+              Happiness <br />
+              Probability
+            </h3>
+            <div className="small-circle">
+              <CircularProgressbar value={50} text={`${50}%`} />
             </div>
+          </div>
 
-            <div className="sad-graph">
-                <CircularProgressbar value={50} text={`${50}%`} />
+          <div className="suicide">
+            <h3>
+              Suicide <br />
+              Probability
+            </h3>
+            <div className="small-circle">
+              <CircularProgressbar value={50} text={`${50}%`} />
             </div>
-            </div>
-
-            <div className='maingraph'>
-                <div className="main-graph-container">
-                    <CircularProgressbar value={50} text={`${50}%`} />
-                </div>
-            </div>
-
+          </div>
         </div>
 
-        <div className='gptoutput'>
-        GPT
+        <div className="risk-rating">
+          <h3>Suicide Risk Rating</h3>
+          <div className="lg-circle">
+            <CircularProgressbar value={50} text={`${50}%`} />
+          </div>
         </div>
-
-        
-        </>
-    )
-}
+      </div>
+    </>
+  );
+};
 
 export default Output;
