@@ -29,12 +29,12 @@ def preprocess(inp):
 
 def app(input_text):
     # Define the input text box
-    print('Input : ',input_text) #take input from user
+    # print('Input : ',input_text) #take input from user
     processed_array = preprocess(input_text) #preprocess the text 
     predict = VotingClassifiers.predict(processed_array) #Model prediction
     probabilities = VotingClassifiers.predict_proba(processed_array) # Get probability estimates
-    print('Probability Estimates : ', probabilities) # Predict Probabilities
-    print('Output : ', predict[0])
+    print(float(probabilities[0][1])*100.) # Predict Probabilities
+    # print('Output : ', predict[0])
 
 
 main()
