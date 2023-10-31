@@ -11,7 +11,8 @@ const Features = () => {
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              const elements = entry.target.querySelectorAll('h2, li');
+              const elements =
+                entry.target.querySelectorAll('.features-heading');
               elements.forEach((element) => {
                 gsap.fromTo(
                   element,
@@ -42,31 +43,60 @@ const Features = () => {
   }, [animationTriggered]);
 
   return (
-    <div id="features" className="features-container" ref={featuresRef}>
-      <h2>Key Features</h2>
-      <ul className="feature-list">
-        <li>
-          Disturbed Mind Analysis: Utilize advanced AI algorithms to analyze and
-          assess disturbed and suicidal thoughts.
-        </li>
-        <li>
-          Real-time Monitoring: Continuously monitor user-generated content for
-          signs of distress and provide timely interventions.
-        </li>
-        <li>
-          Mental Health Wellness Program: Offer users the option to opt in to a
-          personalized mental health wellness program.
-        </li>
-        <li>
-          User-Tuned Experience: Allow users to customize their mental health
-          wellness model to suit their preferences.
-        </li>
-        <li>
-          Privacy Protection: Ensure that user data is used only within the
-          bounds of the platform&apos;s existing data access.
-        </li>
-      </ul>
-    </div>
+    <>
+      <div className="features-container" ref={featuresRef}>
+        <h2 className="features-heading">Features</h2>
+        <div className="main-features">
+          <div className="feature-box">
+            <div>
+              <h3>Real-time Monitoring</h3>
+              <p>
+                Continuously monitor user-generated content for signs of
+                distress and provide timely interventions
+              </p>
+            </div>
+            <div>
+              <h3>Disturbed Mind Analysis</h3>
+              <p>
+                Utilize advanced AI algorithms to analyze and assess disturbed
+                and suicidal thoughts.
+              </p>
+            </div>
+          </div>
+          <div className="centre-img">
+            <img
+              style={{ width: ' 500px', height: '500px' }}
+              src="./src/assets/ResonexLogo.png"
+            ></img>
+          </div>
+          <div className="feature-box">
+            <div>
+              <h3>Mental Health Wellness Program</h3>
+              <p>
+                Offer users the option to opt in to a personalized mental health
+                wellness program
+              </p>
+            </div>
+            <div>
+              <h3>User-Tuned Experience</h3>
+              <p>
+                Allow users to customize their mental health wellness model to
+                suit their preferences
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className=" feature-box sep-feature">
+          <div>
+            <h3>Privacy Protection</h3>
+            <p>
+              Ensure that user data is used only within the bounds of the
+              platform&apos;s existing data access
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

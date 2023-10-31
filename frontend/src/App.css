@@ -8,12 +8,16 @@
 }
 
 a {
-  color: white !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  color: white;
   text-decoration: none;
 }
 
-section {
-  min-height: 100vh;
+li {
+  padding: 0;
 }
 
 #hero {
@@ -25,22 +29,28 @@ section {
   width: 100%;
 }
 
+.circular-lighting {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center top,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+}
+
 nav {
-  top: 36px;
+  top: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  /* margin-top: 15px; */
-  margin-bottom: 5rem;
   position: fixed;
   z-index: 999;
   flex: 1;
-}
-
-nav ul li {
-  list-style: none;
-  padding: 2.5px 5px;
 }
 
 .logo {
@@ -53,25 +63,28 @@ nav ul li {
 }
 
 .nav-center {
+  display: flex;
+  justify-content: center;
   border-radius: 30px;
   filter: drop-shadow(0px 2px 15px rgba(0, 0, 0, 0.6));
   backdrop-filter: blur(8px);
-  background: rgba(42, 69, 75, 0.85);
+  background: linear-gradient(to right, #ffd09690, #f6fdc390);
   z-index: 9;
-  min-width: 25%;
-  flex: 1;
+  min-width: fit-content;
   max-width: 75%;
-  flex: 0;
-  /* margin-right: 20px; */
 }
 
-.nav-links {
+.nav-center ul {
   display: flex;
-  justify-content: space-around;
-  width: auto;
+  justify-content: center;
   padding: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
+}
+
+nav ul li {
+  list-style: none;
+  font-weight: 400;
+  padding: 0 5px;
+  margin: 0px 20px;
 }
 
 .btn {
@@ -80,42 +93,70 @@ nav ul li {
   padding: 0.6em 1.2em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  border-radius: 20px;
+  background-color: transparent;
+  border: #f6fdc390 2px solid;
+  color: #f6fdc390;
+  border-radius: 24px;
+}
+
+.btn a {
+  color: #f6fdc3;
 }
 
 .title-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-content: center;
   align-items: center;
-  width: 100%;
+  text-align: center;
+  margin-top: 120px;
 }
 
 .title {
   display: flex;
-  justify-content: space-between;
-  height: 20%;
-  font-weight: bold;
-  color: #fff;
-  margin-top: 2px;
-  opacity: 1;
+  justify-content: center;
+  font-weight: 600;
+  color: transparent;
+  opacity: 0;
+  font-size: 4rem;
+  line-height: 1.3em;
 }
 
-.title span {
-  opacity: 0;
+.title-container span {
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.7) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-.name {
-  opacity: 0;
-  margin: 0rem 0 1rem 0;
-  font-size: 8rem;
+.title-container span .gradient-text {
+  /* background: linear-gradient(to right, #ffc26d, #f18c64); */
+  background: linear-gradient(to right, #ffcf96, #f6fdc3, #cdfad5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
+
+.title-container p {
+  background: linear-gradient(
+    180deg,
+    #ffffffcc 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
 .tagline {
-  font-size: 1.5rem;
-
-  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 1.15rem;
+  opacity: 0;
 }
 
 .space {
@@ -123,21 +164,56 @@ nav ul li {
 }
 
 .demo-button {
-  margin: 5rem 0rem 10rem;
+  margin: 2rem 0rem 10rem;
   font-size: 1rem;
   opacity: 0;
   border: 0;
   padding: 0.6em 1.2em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  filter: drop-shadow(0px 2px 15px rgba(0, 0, 0, 0.6));
+  backdrop-filter: blur(8px);
+  background: linear-gradient(to right, #ffd09690, #f6fdc390);
   cursor: pointer;
   border-radius: 20px;
 }
 
-.features-container h2,
-.features-container li {
+#features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(17, 78, 107, 0.18); */
+  width: 100%;
+  margin-top: 73px;
+  padding-top: 100px;
+}
+
+.features-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.features-heading {
+  font-size: 4rem;
+  font-weight: 600;
   opacity: 0;
+}
+
+.main-features {
+  display: flex;
+  justify-content: center;
+}
+
+.feature-box {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 /* Dashborad Styles */
