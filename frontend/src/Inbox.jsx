@@ -1,4 +1,7 @@
-const Inbox = ({setTargetPercent}) => {
+import { useState } from "react";
+
+const Inbox = ({setTargetPercent, setHappy, setSad}) => {
+    const [reply, setReply] = useState("");
   const handleSubmit = async (buttonName) => {
     const formData = new FormData(document.getElementById('myForm'));
     const userInput = formData.get('feels');
@@ -16,10 +19,17 @@ const Inbox = ({setTargetPercent}) => {
       body: JSON.stringify({ userInput }),
     });
 
-    const data = await response.json();
-    console.log(data.result);
-    setTargetPercent(parseFloat(data.result))
-
+    if (buttonName === 'seranos'){
+      const data = await response.json();
+      console.log(data.result);
+      setTargetPercent(parseFloat(data.result))
+    }
+  
+    if (buttonName === 'theralyse'){
+      const data = await response.json();
+      console.log(data.result);
+      setReply((data.result))
+    }
   };
 
   const formSubmit = (e) => {
@@ -61,7 +71,8 @@ const Inbox = ({setTargetPercent}) => {
         </button>
       </div>
 
-      <div className="gptoutput">Output</div>
+      <div className="gpt-title">TheralyseGPT Says:</div>
+      <div className="gptoutput">{reply}</div>
     </>
   );
 };

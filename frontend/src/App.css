@@ -246,7 +246,12 @@ nav ul li {
   filter: drop-shadow(0px 0px 5px rgba(229, 194, 145, 0.37));
 }
 
+.gpt-title {
+  padding: 0rem 1rem 1rem;
+}
+
 .gptoutput {
+  overflow: auto;
   font-size: 1rem;
   font-family: inherit;
   font-weight: 400;

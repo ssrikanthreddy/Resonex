@@ -28,7 +28,7 @@ app.post('/theralyse', async (req, res) => {
         },
         {
           role: 'user',
-          content: 'Deeply analyse this user\'s feelings within 5 lines: \"'+userInput + "\"",
+          content: 'Deeply analyse this user\'s feelings within 10 lines: \"'+userInput + "\"",
         },
       ],
       max_tokens: 200,

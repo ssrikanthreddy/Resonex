@@ -1,6 +1,6 @@
 import CircleGraph from './CircleGraph';
 
-const Output = ({targetPercent}) => {
+const Output = ({targetPercent, happy, sad}) => {
 
   return (
     <>

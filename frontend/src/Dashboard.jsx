@@ -5,7 +5,9 @@ import Output from './Output';
 
 const Dashboard = () => {
 
-  const [targetPercent, setTargetPercent] = useState(50)
+  const [targetPercent, setTargetPercent] = useState(50);
+  const [happy, setHappy] = useState(50);
+  const [sad, setSad] = useState(50);
   
 
   const location = useLocation();
@@ -31,11 +33,11 @@ const Dashboard = () => {
 
       <div className="dashboard">
         <div className="input">
-          <Inbox setTargetPercent={setTargetPercent}/>
+          <Inbox setHappy={setHappy} setSad={setSad} setTargetPercent={setTargetPercent}/>
         </div>
 
         <div className="output">
-          <Output targetPercent={targetPercent}/>
+          <Output happy={happy} sad={sad} targetPercent={targetPercent}/>
         </div>
       </div>
     </div>

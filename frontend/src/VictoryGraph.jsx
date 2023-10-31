@@ -14,6 +14,13 @@ class VictoryGraph extends React.Component {
       percent: 25, data: this.getData(0)
     };
   }
+
+
+  componentDidMount() {
+    this.setStateInterval = window.setInterval(() => {
+      // ... (existing code)
+    }, 2000);
+  }
   getData(percent) {
     return [{ x: 1, y: percent }, { x: 2, y: 100 - percent }];
   }
