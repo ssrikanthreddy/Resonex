@@ -31,7 +31,7 @@ const Features = () => {
             }
           });
         },
-        { threshold: 0.7 }
+        { threshold: 0.6 }
       ); // Trigger when at least 50% of the element is in viewport
 
       observer.observe(featuresRef.current);

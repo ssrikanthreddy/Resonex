@@ -18,7 +18,7 @@ const Navbar = () => {
         { y: '40px' },
         { y: '0%', duration: 0.4, stagger: 0.01, ease: 'power2.out' }
       );
-    }, 2500);
+    }, 2000);
   }, []);
 
   return (
@@ -30,38 +30,28 @@ const Navbar = () => {
         <ul className="nav-links">
           <li>
             <a href="#features">
-              <span>F</span>
-              <span>e</span>
-              <span>a</span>
-              <span>t</span>
-              <span>u</span>
-              <span>r</span>
-              <span>e</span>
-              <span>s</span>
+              <span>Features</span>
             </a>
           </li>
           <li>
             <a href="#about">
-              <span>A</span>
-              <span>b</span>
-              <span>o</span>
-              <span>u</span>
-              <span>t</span>
+              <span>About</span>
             </a>
           </li>
           <li>
             <a href="#faq">
-              <span>F</span>
-              <span>A</span>
-              <span>Q</span>
-              <span>&apos;</span>
-              <span>s</span>
+              <span>FAQ&apos;s</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact">
+              <span>Contact</span>
             </a>
           </li>
         </ul>
       </div>
       <div className="nav-elements nav-right">
-        <button className="btn">
+        <button className="btn gradient-border">
           <Link to="/dashboard">Demo</Link>
         </button>
       </div>

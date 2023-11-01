@@ -21,22 +21,7 @@ const LandingPage = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      const elements = document.querySelectorAll('.name');
-
-      gsap.fromTo(
-        elements,
-        { opacity: 0 },
-        { opacity: 1, duration: 2, stagger: 0.01, ease: 'power2.out' }
-      );
-      gsap.fromTo(
-        elements,
-        { y: '40px' },
-        { y: '0%', duration: 0.4, stagger: 0.01, ease: 'power2.out' }
-      );
-    }, 500);
-
-    setTimeout(() => {
-      const elements = document.querySelectorAll('.tagline span');
+      const elements = document.querySelectorAll('.animate');
 
       gsap.fromTo(
         elements,
@@ -49,55 +34,42 @@ const LandingPage = () => {
         { y: '0%', duration: 0.4, stagger: 0.01, ease: 'power2.out' }
       );
     }, 1000);
+
+    setTimeout(() => {
+      const elements = document.querySelectorAll('.tagline');
+
+      gsap.fromTo(
+        elements,
+        { opacity: 0 },
+        { opacity: 1, duration: 2, stagger: 0.01, ease: 'power2.out' }
+      );
+      gsap.fromTo(
+        elements,
+        { y: '40px' },
+        { y: '0%', duration: 0.4, stagger: 0.01, ease: 'power2.out' }
+      );
+    }, 1500);
   }, []);
 
   return (
     <>
+      <div className="circular-lighting"></div>
       <section id="hero">
         <div className="circular-lighting"></div>
         <Navbar />
+
         <div className="title-container">
-          <h1 className="title name">Resonex.AI</h1>
-          <h2 className="title tagline">
-            <span>Y</span>
-            <span>o</span>
-            <span>u</span>
-            <span>r</span>
-            <span className="space"> </span>
-            <span>S</span>
-            <span>h</span>
-            <span>i</span>
-            <span>e</span>
-            <span>l</span>
-            <span>d</span>
-            <span className="space"> </span>
-            <span>A</span>
-            <span>g</span>
-            <span>a</span>
-            <span>i</span>
-            <span>n</span>
-            <span>s</span>
-            <span>t</span>
-            <span className="space"> </span>
-            <span>D</span>
-            <span>i</span>
-            <span>g</span>
-            <span>i</span>
-            <span>t</span>
-            <span>a</span>
-            <span>l</span>
-            <span className="space"> </span>
-            <span>D</span>
-            <span>i</span>
-            <span>s</span>
-            <span>t</span>
-            <span>r</span>
-            <span>e</span>
-            <span>s</span>
-            <span>s</span>
-          </h2>
-          <DemoButton />
+          <span className="title animate">Build your digital distress </span>
+          <span className="title animate">
+            <span className="gradient-text animate">
+              shield today with Resonex AI
+            </span>
+          </span>
+          <p className="tagline ">
+            Empowering social media with accurate mental health risk detection.
+          </p>
         </div>
+        <DemoButton />
       </section>
       <section id="features">
         <Features />
