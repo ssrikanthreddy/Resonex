@@ -20,9 +20,7 @@ const LandingPage = () => {
   requestAnimationFrame(raf);
 
   useEffect(() => {
-
-    setTimeout(()=>{
-
+    setTimeout(() => {
       const elements = document.querySelectorAll('.name');
 
       gsap.fromTo(
@@ -35,13 +33,9 @@ const LandingPage = () => {
         { y: '40px' },
         { y: '0%', duration: 0.4, stagger: 0.01, ease: 'power2.out' }
       );
+    }, 1000);
 
-    }, 1000)
-    
-    
-
-    setTimeout(()=>{
-
+    setTimeout(() => {
       const elements = document.querySelectorAll('.tagline span');
 
       gsap.fromTo(
@@ -54,18 +48,16 @@ const LandingPage = () => {
         { y: '40px' },
         { y: '0%', duration: 0.4, stagger: 0.01, ease: 'power2.out' }
       );
-
-    }, 1500)
+    }, 1500);
   }, []);
 
   return (
     <>
       <section id="hero">
+        <div className="circular-lighting"></div>
         <Navbar />
         <div className="title-container">
-          <h1 className="title name">
-            Resonex.AI
-          </h1>
+          <h1 className="title name">Resonex.AI</h1>
           <h2 className="title tagline">
             <span>Y</span>
             <span>o</span>
@@ -108,11 +100,7 @@ const LandingPage = () => {
         </div>
       </section>
       <section id="features">
-        <div className="col">
-          <Features />
-          <Features />
-          <Features />
-        </div>
+        <Features />
       </section>
     </>
   );

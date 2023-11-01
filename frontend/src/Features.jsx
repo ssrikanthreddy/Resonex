@@ -11,7 +11,9 @@ const Features = () => {
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              const elements = entry.target.querySelectorAll('h2, li');
+              const elements = entry.target.querySelectorAll(
+                '.features-heading, .centre-img, .feature-box'
+              );
               elements.forEach((element) => {
                 gsap.fromTo(
                   element,
