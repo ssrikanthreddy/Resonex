@@ -69,7 +69,11 @@ nav ul li {
   border-radius: 30px;
   filter: drop-shadow(0px 2px 15px rgba(0, 0, 0, 0.6));
   backdrop-filter: blur(8px);
-  background: rgba(42, 69, 75, 0.85);
+  background: linear-gradient(
+    to right,
+    rgb(246, 253, 195, 0.5),
+    rgb(205, 250, 213, 0.5)
+  );
   z-index: 9;
   min-width: 25%;
   flex: 1;
@@ -139,7 +143,6 @@ nav ul li {
 }
 
 .title-container span .gradient-text {
-  /* background: linear-gradient(to right, #ffc26d, #f18c64); */
   background: linear-gradient(to right, #ffcf96, #f6fdc3, #cdfad5);
   background-clip: text;
   -webkit-background-clip: text;
@@ -175,7 +178,7 @@ nav ul li {
 
 .demo-button {
   margin: 5rem 0rem 10rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   opacity: 0;
   border: 0;
   padding: 0.6em 1.2em;
@@ -183,7 +186,11 @@ nav ul li {
   font-family: inherit;
   filter: drop-shadow(0px 2px 15px rgba(0, 0, 0, 0.3));
   backdrop-filter: blur(8px);
-  background: linear-gradient(to right, #ffd09690, #f6fdc390);
+  background: linear-gradient(
+    to right,
+    rgb(246, 253, 195, 0.5),
+    rgb(205, 250, 213, 0.5)
+  );
   cursor: pointer;
   border-radius: 40px;
 }
@@ -220,6 +227,42 @@ nav ul li {
   font-size: 4rem;
   font-weight: 600;
   opacity: 0;
+  background: linear-gradient(to right, #ffcf96, #f6fdc3, #cdfad5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.main-features {
+  display: flex;
+  justify-content: center;
+}
+
+.feature-box {
+  opacity: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.feature {
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.7) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.feature p {
+  background: linear-gradient(
+    180deg,
+    #ffffffcc 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 /* Dashborad Styles */
