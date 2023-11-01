@@ -18,7 +18,7 @@ const DemoButton = () => {
         { y: '40px' },
         { y: '0%', duration: 0.4, stagger: 0.01, ease: 'power2.out' }
       );
-    }, 2000);
+    }, 2500);
   }, []);
 
   return (
