@@ -29,7 +29,7 @@ li {
   width: 100%;
 }
 
-/* .circular-lighting {
+.circular-lighting {
   position: absolute;
   top: 0;
   left: 0;
@@ -38,9 +38,9 @@ li {
   background: radial-gradient(
     circle at center top,
     rgba(255, 255, 255, 0.15) 0%,
-    rgba(255, 255, 255, 0) 56%
+    rgba(255, 255, 255, 0) 45%
   );
-} */
+}
 
 nav {
   top: 10px;
@@ -156,12 +156,9 @@ nav ul li {
   background-clip: text;
   color: transparent;
   -webkit-background-clip: text;
-}
-
-.tagline {
-  font-size: 1.5rem;
-
+  font-size: 1.15rem;
   font-weight: 500;
+  opacity: 0;
 }
 
 .demo-button {
@@ -197,7 +194,7 @@ nav ul li {
   justify-content: center;
   align-items: center;
   /* background-color: rgba(17, 78, 107, 0.18); */
-  background: linear-gradient(180deg, #051728 15%, #15436e);
+  background: linear-gradient(360deg, #051728 10%, #020d17);
   width: 100%;
   margin-top: 73px;
   padding-top: 100px;
