@@ -14,7 +14,7 @@ const Dashboard = () => {
   useEffect(() => {
     // Check if the current location is '/dashboard'
     if (location.pathname === '/dashboard') {
-      document.body.style.height = '100vh';
+      document.body.style.height = '100%';
     } else {
       document.body.style.height = 'auto';
     }

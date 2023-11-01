@@ -33,7 +33,7 @@ const LandingPage = () => {
         { y: '40px' },
         { y: '0%', duration: 0.4, stagger: 0.01, ease: 'power2.out' }
       );
-    }, 1000);
+    }, 600);
 
     setTimeout(() => {
       const elements = document.querySelectorAll('.tagline');

@@ -385,7 +385,7 @@ nav ul li {
   border: 0;
   padding: 1rem;
   margin-bottom: 50px;
-  min-height: 295px;
+  min-height: 10rem;
   resize: none;
 }
 
