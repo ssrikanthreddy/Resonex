@@ -306,7 +306,6 @@ nav ul li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
   width: 100%;
 }
 
@@ -336,7 +335,7 @@ nav ul li {
   border-radius: 20px;
   border: 0;
   padding: 1rem;
-  height: 180px;
+  height: 10rem;
   width: 90%;
   resize: none;
 }
