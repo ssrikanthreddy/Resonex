@@ -12,7 +12,7 @@ const Features = () => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               const elements =
-                entry.target.querySelectorAll('.features-heading');
+                entry.target.querySelectorAll('.features-heading, .centre-img, .feature-box');
               elements.forEach((element) => {
                 gsap.fromTo(
                   element,
@@ -30,7 +30,7 @@ const Features = () => {
             }
           });
         },
-        { threshold: 0.7 }
+        { threshold: 0.6 }
       ); // Trigger when at least 50% of the element is in viewport
 
       observer.observe(featuresRef.current);

@@ -209,6 +209,7 @@ nav ul li {
 }
 
 .feature-box {
+  opacity: 0;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -334,6 +335,11 @@ nav ul li {
   min-height: 295px;
   resize: none;
 }
+
+.centre-img {
+  opacity: 0;
+}
+
 
 /* Output side */
 
