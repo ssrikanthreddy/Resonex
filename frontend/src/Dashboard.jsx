@@ -1,14 +1,12 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Inbox from './Inbox';
 import Output from './Output';
 
 const Dashboard = () => {
-
   const [targetPercent, setTargetPercent] = useState(50);
   const [happy, setHappy] = useState(50);
   const [sad, setSad] = useState(50);
-  
 
   const location = useLocation();
   useEffect(() => {
@@ -33,11 +31,15 @@ const Dashboard = () => {
 
       <div className="dashboard">
         <div className="input">
-          <Inbox setHappy={setHappy} setSad={setSad} setTargetPercent={setTargetPercent}/>
+          <Inbox
+            setHappy={setHappy}
+            setSad={setSad}
+            setTargetPercent={setTargetPercent}
+          />
         </div>
 
         <div className="output">
-          <Output happy={happy} sad={sad} targetPercent={targetPercent}/>
+          <Output happy={happy} sad={sad} targetPercent={targetPercent} />
         </div>
       </div>
     </div>
