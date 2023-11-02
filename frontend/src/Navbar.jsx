@@ -7,12 +7,12 @@ const Navbar = () => {
 
   useEffect(() => {
     setTimeout(()=>{
-      const navs = document.querySelectorAll('.nav-elements');
+      const navs = document.querySelectorAll('.nav-elements, nav');
 
     gsap.fromTo(
       navs,
       { opacity: 0 },
-      { opacity: 1, duration: 2, stagger: 0.01, ease: 'power2.out' }
+      { opacity: 1, duration: 1, stagger: 0.01, ease: 'power2.out' }
     );
 
     gsap.fromTo(
@@ -38,18 +38,20 @@ const Navbar = () => {
   }, []);
 
   const navbarStyles = {
-    display: isTop ? 'block' : 'none',
+    opacity: isTop? "1": "0",
+    transition: "opacity 0.4s"
   };
 
   const navCenterStyles = {
-    marginTop: isTop ? '' : '12px',
-    marginRight: isTop ? '' : '10px',
+    marginTop: isTop ? '' : '0px',
+    marginRight: isTop ? '' : '0px',
   };
 
   const logoStyles = {
-    display: isTop ? 'block' : 'none',
+    opacity: isTop? "1": "0",
     height: '80px',
     width: '80px',
+    transition: "opacity 0.4s"
   };
   return (
     <nav>

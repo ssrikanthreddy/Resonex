@@ -10,7 +10,7 @@ const DemoButton = () => {
       gsap.fromTo(
         demoButton,
         { opacity: 0 },
-        { opacity: 1, duration: 2, stagger: 0.01, ease: 'power2.out' }
+        { opacity: 1, duration: 1, stagger: 0.01, ease: 'power2.out' }
       );
 
       gsap.fromTo(
