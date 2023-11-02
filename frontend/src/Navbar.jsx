@@ -6,7 +6,8 @@ const Navbar = () => {
   const [isTop, setIsTop] = useState(true);
 
   useEffect(() => {
-    const navs = document.querySelectorAll('.nav-elements');
+    setTimeout(()=>{
+      const navs = document.querySelectorAll('.nav-elements');
 
     gsap.fromTo(
       navs,
@@ -19,6 +20,7 @@ const Navbar = () => {
       { y: '40px' },
       { y: '0%', duration: 0.4, stagger: 0.01, ease: 'power2.out' }
     );
+    }, 2000)
 
     const handleScroll = () => {
       if (window.scrollY > 500) {
