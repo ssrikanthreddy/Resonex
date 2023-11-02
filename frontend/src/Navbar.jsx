@@ -37,7 +37,6 @@ const Navbar = () => {
 
   const navbarStyles = {
     display: isTop ? 'block' : 'none',
-    transition: 'opacity 0.5s ease-in-out',
   };
 
   const navCenterStyles = {
@@ -49,7 +48,6 @@ const Navbar = () => {
     display: isTop ? 'block' : 'none',
     height: '80px',
     width: '80px',
-    transition: 'opacity 0.5s ease-in-out',
   };
   return (
     <nav>
