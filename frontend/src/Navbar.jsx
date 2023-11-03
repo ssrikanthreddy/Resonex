@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import gsap from 'gsap';
-import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isTop, setIsTop] = useState(true);
