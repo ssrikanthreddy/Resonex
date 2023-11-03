@@ -1,42 +1,457 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  color: white;
+  text-decoration: none;
+}
+
+li {
+  padding: 0;
+}
+
+#hero {
+  margin-top: 7.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.circular-lighting {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center top,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0) 45%
+  );
+}
+
+nav {
+  top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  flex: 1;
+  opacity: 0;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  height: 80px;
+  width: 80px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-elements {
+  opacity: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+.nav-center {
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+  filter: drop-shadow(0px 2px 15px rgba(0, 0, 0, 0.6));
+  backdrop-filter: blur(8px);
+  background: linear-gradient(
+    to right,
+    rgb(246, 253, 195, 0.5),
+    rgb(205, 250, 213, 0.5)
+  );
+  z-index: 9;
+  min-width: fit-content;
+  max-width: 75%;
 }
 
-.card {
-  padding: 2em;
+.nav-center ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
 }
 
-.read-the-docs {
-  color: #888;
+nav ul li {
+  list-style: none;
+  font-weight: 400;
+  padding: 0 5px;
+  margin: 0px 20px;
+}
+
+.btn {
+  font-size: 1rem;
+  border: 0;
+  padding: 0.6em 1.2em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: #f6fdc390 2px solid;
+  color: #f6fdc390;
+  border-radius: 24px;
+}
+
+.btn:hover {
+  filter: drop-shadow(0px 0px 5px #f6fdc390);
+}
+
+.btn a {
+  color: #f6fdc3;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 120px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  color: transparent;
+  opacity: 0;
+  font-size: 4rem;
+  line-height: 1.3em;
+}
+
+.title-container span {
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.7) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.title-container span .gradient-text {
+  /* background: linear-gradient(to right, #ffc26d, #f18c64); */
+  background: linear-gradient(to right, #ffcf96, #f6fdc3, #cdfad5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.title-container p {
+  background: linear-gradient(
+    180deg,
+    #ffffffcc 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  font-size: 1.15rem;
+  font-weight: 500;
+  opacity: 0;
+}
+
+.demo-button {
+  margin: 2rem 0rem 10rem;
+  font-size: 1rem;
+  opacity: 0;
+  border: 0;
+  padding: 0.6em 1.2em;
+  font-weight: 500;
+  font-family: inherit;
+  filter: drop-shadow(0px 2px 15px rgba(0, 0, 0, 0.3));
+  backdrop-filter: blur(8px);
+  background: linear-gradient(
+    to right,
+    rgb(246, 253, 195, 0.5),
+    rgb(205, 250, 213, 0.5)
+  );
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+.demo-button:hover {
+  filter: drop-shadow(0px 0px 3px #f6fdc369);
+}
+
+.demo-button:hover {
+  filter: drop-shadow(0px 0px 3px #f6fdc369);
+}
+
+#features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(17, 78, 107, 0.18); */
+  background: linear-gradient(360deg, #051728 10%, #020d17);
+  width: 100%;
+  margin-top: 73px;
+  padding-top: 100px;
+}
+
+.features-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.features-heading {
+  font-size: 4rem;
+  font-weight: 600;
+  opacity: 0;
+  background: linear-gradient(to right, #ffcf96, #f6fdc3, #cdfad5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.main-features-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-features {
+  display: flex;
+  justify-content: center;
+}
+
+.feature-box {
+  opacity: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.feature {
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.7) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.feature p {
+  background: linear-gradient(
+    180deg,
+    #ffffffcc 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.main-features {
+  display: flex;
+  justify-content: center;
+}
+
+/* Dashborad Styles */
+
+/* Input side */
+
+.page-dashboard {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  /* flex-direction: column; */
+}
+
+.dashbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+
+.logo-dash {
+  width: 5rem;
+  height: 5rem;
+  background-image: url('./assets/ResonexLogo.png');
+  background-size: cover;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  background-color: #00000000; /* Set your desired background color */
+  border-radius: 10px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.prompt {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ecb365;
+}
+
+.inbox {
+  width: 100%;
+  height: 100%;
+}
+
+.feeling {
+  overflow-y: scroll;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: rgb(4, 41, 58, 0.5);
+  border-radius: 20px;
+  border: 0;
+  padding: 1rem;
+  height: 10rem;
+  width: 90%;
+  resize: none;
+}
+
+.feeling:focus {
+  outline: #ecb365;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+  /* position: relative; */
+  margin: 30px 0 30px 0;
+}
+
+.button {
+  font-family: inherit;
+  font-weight: 400;
+  border: 0;
+  border-radius: 16px;
+  padding: 10px 25px;
+  left: 1rem;
+  background: linear-gradient(to right, #ffc26d, #f1b764);
+  color: #0a345b;
+}
+
+.button:hover {
+  background: #ffcc84;
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 5px rgba(229, 194, 145, 0.37));
+}
+
+.gpt-title {
+  padding: 0rem 1rem 1rem;
+}
+
+.gptoutput {
+  overflow: auto;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 400;
+  width: 90%;
+  background-color: rgb(4, 41, 58, 0.5);
+  border-radius: 20px;
+  border: 0;
+  padding: 1rem;
+  margin-bottom: 50px;
+  min-height: 10rem;
+  resize: none;
+}
+
+.centre-img {
+  opacity: 0;
+}
+
+/* Output side */
+
+.graphs {
+  display: flex;
+  flex-direction: column;
+
+  background: linear-gradient(
+    to bottom,
+    rgb(4, 41, 58, 0.4),
+    rgb(4, 41, 58, 0.405)
+  );
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+  margin-left: 80px;
+  height: 100%;
+}
+
+.probabilities {
+  display: flex;
+  align-self: stretch;
+  justify-content: space-around;
+  padding: 3rem 0rem;
+  border-bottom: #ecb46571 1px solid;
+}
+
+.probabilities h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ecb365;
+}
+
+.happy,
+.suicide,
+.risk-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.small-circle {
+  width: 100px;
+  height: 100px;
+}
+
+.risk-rating h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #ecb365;
+}
+
+.lg-circle {
+  width: 250px;
+  height: 250px;
+}
+
+tspan {
+  font-weight: bold;
+  font-size: 4em !important;
+  font-family: 'Poppins';
+  stroke: white !important;
+  fill: white !important;
 }
