@@ -141,6 +141,12 @@ Utilising ResonexAI is very simple. All you have to do is input text or audio in
 
 <br>
 
+## 💻System Architecture
+
+[![System-Design-Architecture.png](https://i.postimg.cc/65ZWn8vB/System-Design-Architecture.png)](https://postimg.cc/LnHFM6DW)
+
+<br>
+
 ## 🤝 Contributing
 
 We appreciate your interest in contributing to our project! Whether you want to report a bug, propose new features, or submit improvements to the existing codebase, your contributions are highly valued.
