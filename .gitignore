@@ -32,6 +32,6 @@ dist-ssr
 
 backend/datasets
 backend/notebooks
-./backend/backup_key.txt
-./backend/.env
+backend/backup_key.txt
+backend/.env
 backend/models/features.csv
