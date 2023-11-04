@@ -1,7 +1,10 @@
 import { useState } from "react";
+import AudioRecorder from "./AudioRecorder";
 
 const Inbox = ({setTargetPercent, setHappy, setSad}) => {
     const [reply, setReply] = useState("");
+    const [activeTab, setActiveTab] = useState('text');
+
   const handleSubmit = async (buttonName) => {
     const formData = new FormData(document.getElementById('myForm'));
     const userInput = formData.get('feels');
@@ -37,19 +40,20 @@ const Inbox = ({setTargetPercent, setHappy, setSad}) => {
   };
 
   const handleTab = (tabName) => {
-
-  }
+  setActiveTab(tabName);
+  console.log(tabName);
+  } 
 
   return (
     <>
       <h1 className="prompt">Hey! How are you feeling today?</h1>
       <div className="inbox">
         
-      <div class="tab-container">
-        <div class="tab" onclick={handleTab("text")}>Text</div>
-        <div class="tab" onclick={handleTab("voice")}>Voice</div>
+      <div className="tab-container">
+        <div className="tab" onClick={() => handleTab('text')}>Text</div>
+        <div className="tab" onClick={() => handleTab('voice')}>Voice</div>
       </div>
-        <div id="text" className="wrapper active">
+        <div id="text" className={activeTab === 'text' ? 'wrapper active' : 'wrapper'}>
           <div className="input">
           <form id="myForm" onSubmit={formSubmit}>
             <textarea
@@ -82,10 +86,8 @@ const Inbox = ({setTargetPercent, setHappy, setSad}) => {
           </div>
         </div>
 
-        <div id="voice" className="wrapper ">
-          <div className="input">
-          
-          </div>
+        <div id="voice" className={activeTab === 'voice' ? 'wrapper active' : 'wrapper'}>
+          <AudioRecorder/>
       
 
           <div className="buttons">

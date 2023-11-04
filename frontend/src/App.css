@@ -338,7 +338,8 @@ nav ul li {
   display: block;
 }
 
-.tab-container {  
+.tab-container {
+  border-radius: 10px;
   align-items: center;
   height: 2.4rem;
   background-color: rgba(4, 41, 58, 0.5);;
@@ -346,6 +347,15 @@ nav ul li {
   margin:  0rem 2rem 1rem 0rem ;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.tab {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.tab:hover {
+  cursor: pointer;
 }
 
 .feeling {

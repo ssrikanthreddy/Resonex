@@ -84,7 +84,7 @@ const Navbar = () => {
       <div className="nav-elements nav-right" style={navbarStyles}>
         <button className="btn gradient-border">
           <a
-            href="https://github.com/ssrikanthreddy/reactserver"
+            href="https://github.com/ssrikanthreddy/resonex"
             rel="noreferrer"
             target="_blank"
           >
