@@ -3,7 +3,7 @@
 <div id="top">
 <p align="center">
   <a href="https://github.com/ssrikanthreddy/ResonexAI" target="_blank" rel="noopener noreferrer">
-    <img width = "100" src="https://i.postimg.cc/65k10HFg/Resonex-Logo-Full.png" alt="ResonexAI-logo">
+    <img width = "200" src="https://i.postimg.cc/65k10HFg/Resonex-Logo-Full.png" alt="ResonexAI-logo">
   </a>
 </p>
 </div>
@@ -31,6 +31,7 @@
   - [⚙️ Prerequisites](#️-prerequisites)
   - [📦 Installation](#-installation)
   - [🏃 Running Locally](#-running-locally)
+  - [🔑 API Key Setup](#-api-key-setup)
 - [🎯 Usage](#-usage)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
@@ -110,6 +111,59 @@ To install ResonexAI, follow these steps:
    ```
 
    <br>
+
+### 🔑 API Key Setup
+
+---
+
+This repository uses the OpenAI API to access powerful natural language processing capabilities. To get started, you'll need to set up your `.env` file with your OpenAI API key. Here's a step-by-step guide on how to do it:
+
+## Steps
+
+1. Clone this repository to your local machine:
+
+   ```bash
+   git clone https://github.com/ssrikanthreddy/resonex.git
+   ```
+
+2. Navigate to the root directory of your project:
+
+   ```bash
+   cd resonex
+   cd backend
+   ```
+
+3. Create a new file called `.env` in the root directory of your project. You can do this from the command line or use a text editor of your choice.
+
+4. Open the `.env` file and add the following line:
+
+   ```env
+   OPENAI_API_KEY=your_api_key_here
+   ```
+
+   Replace `your_api_key_here` with your actual OpenAI API key. You can get one [here](https://platform.openai.com/docs/introduction).
+
+5. Save the `.env` file.
+
+6. It's essential to keep your API key confidential. Make sure it's added to your `.gitignore` file to avoid accidentally committing it to your Git repository. If you haven't already, open or create a `.gitignore` file and add the following line to it:
+
+   ```
+   .env
+   ```
+
+   This will exclude the `.env` file from being tracked by Git.
+
+7. Commit the changes to your repository:
+
+   ```bash
+   git add .env .gitignore
+   git commit -m "Add OpenAI API key and update .gitignore"
+   git push
+   ```
+
+Now, your OpenAI API key is securely stored in your `.env` file, and your repository is configured to ignore it during version control.
+
+<br>
 
 ### 🏃 Running Locally
 
