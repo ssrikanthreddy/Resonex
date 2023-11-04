@@ -36,11 +36,21 @@ const Inbox = ({setTargetPercent, setHappy, setSad}) => {
     e.preventDefault();
   };
 
+  const handleTab = (tabName) => {
+
+  }
+
   return (
     <>
       <h1 className="prompt">Hey! How are you feeling today?</h1>
       <div className="inbox">
-        <div className="input">
+        
+      <div class="tab-container">
+        <div class="tab" onclick={handleTab("text")}>Text</div>
+        <div class="tab" onclick={handleTab("voice")}>Voice</div>
+      </div>
+        <div id="text" className="wrapper active">
+          <div className="input">
           <form id="myForm" onSubmit={formSubmit}>
             <textarea
               className="feeling"
@@ -49,10 +59,10 @@ const Inbox = ({setTargetPercent, setHappy, setSad}) => {
               placeholder="I am thinking of ending things..."
             />
           </form>
-        </div>
-      </div>
+          </div>
+      
 
-      <div className="buttons">
+          <div className="buttons">
         <button
           className="button seranos"
           onClick={() => handleSubmit('seranos')}
@@ -69,6 +79,35 @@ const Inbox = ({setTargetPercent, setHappy, setSad}) => {
         >
           Theralyse
         </button>
+          </div>
+        </div>
+
+        <div id="voice" className="wrapper ">
+          <div className="input">
+          
+          </div>
+      
+
+          <div className="buttons">
+        <button
+          className="button seranos"
+          onClick={() => handleSubmit('seranos')}
+          type="submit"
+          name="seranos"
+        >
+          Seranos
+        </button>
+        <button
+          className="button theralyse"
+          onClick={() => handleSubmit('theralyse')}
+          type="submit"
+          name="theralyse"
+        >
+          Theralyse
+        </button>
+          </div>
+        </div>
+
       </div>
 
       <div className="gpt-title">TheralyseGPT Says:</div>

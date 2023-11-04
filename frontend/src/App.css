@@ -329,8 +329,27 @@ nav ul li {
   height: 100%;
 }
 
+.wrapper {
+  display: none;
+
+}
+
+.wrapper.active {
+  display: block;
+}
+
+.tab-container {  
+  align-items: center;
+  height: 2.4rem;
+  background-color: rgba(4, 41, 58, 0.5);;
+  display: flex;
+  margin:  0rem 2rem 1rem 0rem ;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .feeling {
-  overflow-y: scroll;
+  overflow-y: auto;
   font-size: 1rem;
   font-family: inherit;
   background-color: rgb(4, 41, 58, 0.5);
