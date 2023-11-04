@@ -375,6 +375,109 @@ nav ul li {
   outline: #ecb365;
 }
 
+/* Recording Styles */
+.rec {
+}
+
+._1ceqH{
+  background: transparent !important;
+}
+._2fG9h {
+  background: transparent !important
+}
+
+._1ceqH ._dt3-T {
+  min-height: 15em !important;
+}
+._dt3-T {
+  background: transparent !important;
+}
+._1lB9c {
+  display: none !important;
+}
+
+._2N9dq{
+  display: none;
+}
+
+._3bC73 {
+  background: transparent;
+}
+
+._1Yplu {
+  display: none ;
+}
+
+._1YOWG{
+  display: none;
+}
+
+/* The bg of the mic */
+._1dpop{
+  height: 8em !important; 
+  width: 8em !important;
+}
+
+
+/* The mic */
+._3neb0 {
+  height: 4em !important;
+  width: 4em !important; 
+}
+
+/* Stop and pause buttons */
+._qxztz{
+
+}
+
+/* Stop button outer */
+._2uz65{
+  height: 5em !important;
+  width: 5em !important;
+
+}
+/* Stop button inner */
+._oEOY-{
+  height: 2em !important;
+  width: 2em !important;
+}
+
+/* Pause button outer */
+._2uz65{
+  height: 5em !important;
+  width: 5em !important;
+}
+
+/* Pause buttons inner */
+._2ACrw{
+  left: 80% !important;
+  height: 2em !important;
+  width: 4em !important;
+}
+
+
+
+
+
+/* Recording End */
+
+
+
+/* Pie chart */
+
+.row {
+  /* display: flex;
+  flex-direction: row; */
+}
+
+.audio {
+  width: 100%;
+}
+
+rect {
+
+}
+
 .buttons {
   display: flex;
   justify-content: space-between;

@@ -1,5 +1,9 @@
 import { useState } from "react";
 import AudioRecorder from "./AudioRecorder";
+import PieChart from "./PieChart";
+
+const labels = ['A', 'B', 'C', 'D', 'E'];
+  const data = [20, 30, 10, 25, 15];
 
 const Inbox = ({setTargetPercent, setHappy, setSad}) => {
     const [reply, setReply] = useState("");
@@ -87,10 +91,15 @@ const Inbox = ({setTargetPercent, setHappy, setSad}) => {
         </div>
 
         <div id="voice" className={activeTab === 'voice' ? 'wrapper active' : 'wrapper'}>
+          
+          
+          <div className="row audio-section">
           <AudioRecorder/>
+          {/* <PieChart/> */}
+          </div>
       
 
-          <div className="buttons">
+        <div className="buttons">
         <button
           className="button seranos"
           onClick={() => handleSubmit('seranos')}
@@ -108,6 +117,7 @@ const Inbox = ({setTargetPercent, setHappy, setSad}) => {
           Theralyse
         </button>
           </div>
+
         </div>
 
       </div>
