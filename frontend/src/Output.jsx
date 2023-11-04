@@ -1,9 +1,10 @@
 import CircleGraph from './CircleGraph';
+import PieChart from './PieChart';
 
-const Output = ({ targetPercent, happy, sad }) => {
+const Output = ({ targetPercent, happy, sad, activeTab}) => {
   return (
     <section id="output">
-      <div className="graphs">
+      <div id='text' className={activeTab === 'text' ? 'graphs tab-content active' : 'graphs tab-content'}>
         <div className="probabilities">
           <div className="happy">
             <h3>
@@ -32,6 +33,10 @@ const Output = ({ targetPercent, happy, sad }) => {
             <CircleGraph targetPercent={targetPercent} />
           </div>
         </div>
+      </div>
+
+      <div id="voice" className={activeTab === 'voice' ? 'chart tab-content active' : 'chart tab-content'}>
+        <PieChart/>
       </div>
     </section>
   );

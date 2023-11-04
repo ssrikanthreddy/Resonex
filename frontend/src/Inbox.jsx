@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import AudioRecorder from './AudioRecorder';
 
-const Inbox = ({ setTargetPercent, setHappy, setSad }) => {
+const Inbox = ({ setTargetPercent, setHappy, setSad, setActiveTab, activeTab}) => {
   const [reply, setReply] = useState('');
-  const [activeTab, setActiveTab] = useState('text');
 
   const handleSubmit = async (buttonName) => {
     const formData = new FormData(document.getElementById('myForm'));
@@ -61,6 +60,16 @@ const Inbox = ({ setTargetPercent, setHappy, setSad }) => {
             Voice
           </div>
         </div>
+        
+        <div
+          id="voice"
+          className={activeTab === 'voice' ? 'wrapper active' : 'wrapper'}
+        >
+          <AudioRecorder />
+
+         
+        </div>
+
         <div
           id="text"
           className={activeTab === 'text' ? 'wrapper active' : 'wrapper'}
@@ -94,37 +103,16 @@ const Inbox = ({ setTargetPercent, setHappy, setSad }) => {
               Theralyse
             </button>
           </div>
-        </div>
 
-        <div
-          id="voice"
-          className={activeTab === 'voice' ? 'wrapper active' : 'wrapper'}
-        >
-          <AudioRecorder />
-
-          <div className="buttons">
-            <button
-              className="button seranos"
-              onClick={() => handleSubmit('seranos')}
-              type="submit"
-              name="seranos"
-            >
-              Seranos
-            </button>
-            <button
-              className="button theralyse"
-              onClick={() => handleSubmit('theralyse')}
-              type="submit"
-              name="theralyse"
-            >
-              Theralyse
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div className="gpt-title">TheralyseGPT Says:</div>
+          <div className="gpt-title">TheralyseGPT Says:</div>
       <div className="gptoutput">{reply}</div>
+           </div>
+
+      
+    </div>
+
+        
+     
     </section>
   );
 };

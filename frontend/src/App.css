@@ -496,6 +496,14 @@ nav ul li {
   flex-grow: 1;
 }
 
+.tab-content {
+  display: none !important;
+}
+
+.tab-content.active {
+  display: block !important;
+}
+
 .tab:hover {
   cursor: pointer;
 }

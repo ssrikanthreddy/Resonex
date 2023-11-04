@@ -4,6 +4,7 @@ import Inbox from './Inbox';
 import Output from './Output';
 
 const Dashboard = () => {
+  const [activeTab, setActiveTab] = useState('text');
   const [targetPercent, setTargetPercent] = useState(50);
   const [happy, setHappy] = useState(50);
   const [sad, setSad] = useState(50);
@@ -26,11 +27,13 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <Inbox
+        setActiveTab={setActiveTab}
+        activeTab={activeTab}
         setHappy={setHappy}
         setSad={setSad}
         setTargetPercent={setTargetPercent}
       />
-      <Output happy={happy} sad={sad} targetPercent={targetPercent} />
+      <Output activeTab={activeTab} happy={happy} sad={sad} targetPercent={targetPercent} />
     </div>
   );
 };
