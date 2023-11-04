@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useState } from 'react';
+import AudioRecorder from './AudioRecorder';
 
-const Inbox = ({setTargetPercent, setHappy, setSad}) => {
-    const [reply, setReply] = useState("");
+const Inbox = ({ setTargetPercent, setHappy, setSad }) => {
+  const [reply, setReply] = useState('');
+  const [activeTab, setActiveTab] = useState('text');
+
   const handleSubmit = async (buttonName) => {
     const formData = new FormData(document.getElementById('myForm'));
     const userInput = formData.get('feels');
@@ -19,16 +22,21 @@ const Inbox = ({setTargetPercent, setHappy, setSad}) => {
       body: JSON.stringify({ userInput }),
     });
 
-    if (buttonName === 'seranos'){
+    if (buttonName === 'seranos') {
       const data = await response.json();
       console.log(data.result);
-      setTargetPercent(parseFloat(data.result))
+      setTargetPercent(parseFloat(data.result));
+      setHappy(100 - parseFloat(data.result));
+
+      var sadd = parseFloat(data.result) * 1.3;
+
+      setSad(sadd < 100 ? sadd : 100);
     }
-  
-    if (buttonName === 'theralyse'){
+
+    if (buttonName === 'theralyse') {
       const data = await response.json();
       console.log(data.result);
-      setReply((data.result))
+      setReply(data.result);
     }
   };
 
@@ -37,82 +45,87 @@ const Inbox = ({setTargetPercent, setHappy, setSad}) => {
   };
 
   const handleTab = (tabName) => {
-
-  }
+    setActiveTab(tabName);
+    console.log(tabName);
+  };
 
   return (
-    <>
+    <section id="input">
       <h1 className="prompt">Hey! How are you feeling today?</h1>
       <div className="inbox">
-        
-      <div class="tab-container">
-        <div class="tab" onclick={handleTab("text")}>Text</div>
-        <div class="tab" onclick={handleTab("voice")}>Voice</div>
-      </div>
-        <div id="text" className="wrapper active">
-          <div className="input">
-          <form id="myForm" onSubmit={formSubmit}>
-            <textarea
-              className="feeling"
-              name="feels"
-              type="text"
-              placeholder="I am thinking of ending things..."
-            />
-          </form>
+        <div className="tab-container">
+          <div className="tab" onClick={() => handleTab('text')}>
+            Text
           </div>
-      
+          <div className="tab" onClick={() => handleTab('voice')}>
+            Voice
+          </div>
+        </div>
+        <div
+          id="text"
+          className={activeTab === 'text' ? 'wrapper active' : 'wrapper'}
+        >
+          <div className="input">
+            <form id="myForm" onSubmit={formSubmit}>
+              <textarea
+                className="feeling"
+                name="feels"
+                type="text"
+                placeholder="I am thinking of ending things..."
+              />
+            </form>
+          </div>
 
           <div className="buttons">
-        <button
-          className="button seranos"
-          onClick={() => handleSubmit('seranos')}
-          type="submit"
-          name="seranos"
-        >
-          Seranos
-        </button>
-        <button
-          className="button theralyse"
-          onClick={() => handleSubmit('theralyse')}
-          type="submit"
-          name="theralyse"
-        >
-          Theralyse
-        </button>
+            <button
+              className="button seranos"
+              onClick={() => handleSubmit('seranos')}
+              type="submit"
+              name="seranos"
+            >
+              Seranos
+            </button>
+            <button
+              className="button theralyse"
+              onClick={() => handleSubmit('theralyse')}
+              type="submit"
+              name="theralyse"
+            >
+              Theralyse
+            </button>
           </div>
         </div>
 
-        <div id="voice" className="wrapper ">
-          <div className="input">
-          
-          </div>
-      
+        <div
+          id="voice"
+          className={activeTab === 'voice' ? 'wrapper active' : 'wrapper'}
+        >
+          <AudioRecorder />
 
           <div className="buttons">
-        <button
-          className="button seranos"
-          onClick={() => handleSubmit('seranos')}
-          type="submit"
-          name="seranos"
-        >
-          Seranos
-        </button>
-        <button
-          className="button theralyse"
-          onClick={() => handleSubmit('theralyse')}
-          type="submit"
-          name="theralyse"
-        >
-          Theralyse
-        </button>
+            <button
+              className="button seranos"
+              onClick={() => handleSubmit('seranos')}
+              type="submit"
+              name="seranos"
+            >
+              Seranos
+            </button>
+            <button
+              className="button theralyse"
+              onClick={() => handleSubmit('theralyse')}
+              type="submit"
+              name="theralyse"
+            >
+              Theralyse
+            </button>
           </div>
         </div>
-
       </div>
 
       <div className="gpt-title">TheralyseGPT Says:</div>
       <div className="gptoutput">{reply}</div>
-    </>
+    </section>
   );
 };
 

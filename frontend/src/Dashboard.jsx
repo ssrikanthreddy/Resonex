@@ -24,24 +24,13 @@ const Dashboard = () => {
   }, [location.pathname]);
 
   return (
-    <div className="page-dashboard">
-      <div className="dashbar">
-        <div className="logo-dash"></div>
-      </div>
-
-      <div className="dashboard">
-        <div className="input">
-          <Inbox
-            setHappy={setHappy}
-            setSad={setSad}
-            setTargetPercent={setTargetPercent}
-          />
-        </div>
-
-        <div className="output">
-          <Output happy={happy} sad={sad} targetPercent={targetPercent} />
-        </div>
-      </div>
+    <div className="dashboard">
+      <Inbox
+        setHappy={setHappy}
+        setSad={setSad}
+        setTargetPercent={setTargetPercent}
+      />
+      <Output happy={happy} sad={sad} targetPercent={targetPercent} />
     </div>
   );
 };

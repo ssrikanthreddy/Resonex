@@ -1,9 +1,8 @@
 import CircleGraph from './CircleGraph';
 
-const Output = ({targetPercent, happy, sad}) => {
-
+const Output = ({ targetPercent, happy, sad }) => {
   return (
-    <>
+    <section id="output">
       <div className="graphs">
         <div className="probabilities">
           <div className="happy">
@@ -12,7 +11,7 @@ const Output = ({targetPercent, happy, sad}) => {
               Rating
             </h3>
             <div className="small-circle">
-            <CircleGraph targetPercent={targetPercent}/>
+              <CircleGraph targetPercent={happy} />
             </div>
           </div>
 
@@ -22,7 +21,7 @@ const Output = ({targetPercent, happy, sad}) => {
               Rating
             </h3>
             <div className="small-circle">
-            <CircleGraph targetPercent={targetPercent}/>
+              <CircleGraph targetPercent={sad} />
             </div>
           </div>
         </div>
@@ -30,11 +29,11 @@ const Output = ({targetPercent, happy, sad}) => {
         <div className="risk-rating">
           <h3>Suicide Risk Rating</h3>
           <div className="lg-circle">
-            <CircleGraph targetPercent={targetPercent}/>
+            <CircleGraph targetPercent={targetPercent} />
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

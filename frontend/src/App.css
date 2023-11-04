@@ -5,6 +5,7 @@
   align-items: center;
   width: 100%;
   height: 100%;
+  max-width: 100%;
 }
 
 a {
@@ -12,7 +13,10 @@ a {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  color: white;
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.7) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
   text-decoration: none;
 }
 
@@ -27,6 +31,7 @@ li {
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 100%;
 }
 
 .circular-lighting {
@@ -62,7 +67,6 @@ nav {
 .nav-elements {
   opacity: 0;
 }
-
 
 .nav-center {
   display: flex;
@@ -164,7 +168,7 @@ nav ul li {
 }
 
 .demo-button {
-  margin: 2rem 0rem 10rem;
+  margin: 2rem 0rem 8rem;
   font-size: 1rem;
   opacity: 0;
   border: 0;
@@ -196,9 +200,9 @@ nav ul li {
   justify-content: center;
   align-items: center;
   /* background-color: rgba(17, 78, 107, 0.18); */
-  background: linear-gradient(360deg, #051728 10%, #020d17);
+  /* background: linear-gradient(360deg, #051728 10%, #020d17); */
   width: 100%;
-  margin-top: 73px;
+  /* margin-top: 73px; */
   padding-top: 100px;
 }
 
@@ -207,7 +211,7 @@ nav ul li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 100%;
 }
 
 .features-heading {
@@ -220,32 +224,51 @@ nav ul li {
   color: transparent;
 }
 
-.main-features-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
+.feature-column {
+  flex: 1;
+  padding: 12px;
 
-.main-features {
-  display: flex;
-  justify-content: center;
-}
-
-.feature-box {
-  opacity: 0;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
 }
 
+.features-1 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.features-2 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 .feature {
-  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.7) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: #cdfad514;
+  border: rgba(205, 250, 213, 0.336) 1px solid;
+  border-radius: 20px;
+  padding: 40px;
+  width: 280px;
+  height: 260px;
+  margin: 0 12px;
+  box-shadow: 0 0 15px #cdfad533;
+  opacity: 0;
+}
+
+.feature:hover {
+  background: #cdfad527;
+  transition: 0.35s ease;
+}
+
+.feature h3 {
+  background: linear-gradient(to right, #ffd096e9, #f6fdc3e9, #cdfad5e9);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  font-weight: 600;
 }
 
 .feature p {
@@ -259,79 +282,201 @@ nav ul li {
   color: transparent;
 }
 
-.main-features {
-  display: flex;
-  justify-content: center;
-}
-
-/* Dashborad Styles */
-
-/* Input side */
-
-.page-dashboard {
-  width: 100%;
-  display: flex;
-  height: 100%;
-  /* flex-direction: column; */
-}
-
-.dashbar {
+#faq {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100px;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  /* background: #051728; */
 }
 
-.logo-dash {
-  width: 5rem;
-  height: 5rem;
-  background-image: url('./assets/ResonexLogo.png');
-  background-size: cover;
+.faq-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
 }
+
+.faq-heading {
+  font-size: 3rem;
+  background: linear-gradient(to right, #ffd096e9, #f6fdc3e9, #cdfad5e9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.faq-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.faq-list li {
+  margin-top: 20px;
+}
+
+.faq-list li button {
+  padding: 15px;
+  border: rgba(205, 250, 213, 0.336) 1px solid;
+  color: #f6fdc3d2;
+  border-radius: 12px;
+  width: 50rem;
+  text-align: left;
+  font-size: 1.5rem;
+  background: #cdfad514;
+  font-family: 'Poppins';
+}
+
+.answer {
+  font-size: 1.25rem;
+  width: 50rem;
+  padding: 5px;
+}
+
+#footer {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 50px;
+  /* background: linear-gradient(180deg, #051728 10%, #020d17); */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  padding: 50px;
+}
+
+.footer-header {
+  background: linear-gradient(to right, #ffd096e9, #f6fdc3e9, #cdfad5e9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  width: 80%;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.footer-button {
+  font-size: 1rem;
+  border: 0;
+  padding: 0.6em 1.2em;
+  font-weight: 500;
+  font-family: inherit;
+  filter: drop-shadow(0px 2px 15px rgba(0, 0, 0, 0.3));
+  backdrop-filter: blur(8px);
+  background: linear-gradient(
+    to right,
+    rgb(246, 253, 195, 0.5),
+    rgb(205, 250, 213, 0.5)
+  );
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+.divider {
+  display: flex;
+  justify-content: center;
+  /* margin: 10px 0; */
+  border: #cdfad5 1px solid;
+  width: 80%;
+}
+
+.logo-foot {
+  width: 3rem;
+  height: 3rem;
+  background-image: url('./assets/ResonexLogoFull.png');
+  background-size: cover;
+  opacity: 0.85;
+}
+
+.foot-subtitle {
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.7) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin-top: 50px;
+  height: 100%;
+}
+
+.left-foot {
+  display: flex;
+  align-items: end;
+}
+
+.footer-links {
+  height: 100%;
+}
+
+.footer-links ul {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0;
+}
+
+.footer-links ul li {
+  /* background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.7) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; */
+  list-style: none;
+  font-size: 1.25rem;
+  margin-left: 1rem;
+}
+
+/* Dashborad Styles */
+/* Input side */
 
 .dashboard {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-self: center;
-  background-color: #00000000; /* Set your desired background color */
-  border-radius: 10px;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  /* height: 100%; */
+  flex-wrap: wrap;
   width: 100%;
-  height: 100%;
-  opacity: 1;
 }
 
-.input {
+#input {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  min-height: 100%;
+  flex: 1;
+  padding: 25px 50px 8px 100px;
 }
 
-.output {
+#output {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
-  width: 100%;
+  flex: 1;
 }
 
 .prompt {
   font-size: 2.5rem;
   font-weight: 600;
-  color: #ecb365;
-}
-
-.inbox {
-  width: 100%;
-  height: 100%;
+  background: linear-gradient(to right, #ffd096e9, #f6fdc3e9, #cdfad5e9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .wrapper {
   display: none;
-
 }
 
 .wrapper.active {
@@ -340,9 +485,19 @@ nav ul li {
 
 .tab-container {
   display: flex;
-  padding:  0rem 2rem 1rem 0rem ;
+  border-radius: 10px;
+  padding: 0rem 2rem 1rem 0rem;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.tab {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.tab:hover {
+  cursor: pointer;
 }
 
 .feeling {
@@ -377,8 +532,10 @@ nav ul li {
   border-radius: 16px;
   padding: 10px 25px;
   left: 1rem;
-  background: linear-gradient(to right, #ffc26d, #f1b764);
-  color: #0a345b;
+  /* background: linear-gradient(to right, #ffc26d, #f1b764);
+  color: #0a345b; */
+  background: linear-gradient(to right, #ffd096e9, #f6fdc3e9, #cdfad5e9);
+  color: #051728;
 }
 
 .button:hover {
@@ -406,23 +563,17 @@ nav ul li {
   resize: none;
 }
 
-.centre-img {
-  opacity: 0;
-}
-
 /* Output side */
 
 .graphs {
   display: flex;
   flex-direction: column;
-
   background: linear-gradient(
     to bottom,
     rgb(4, 41, 58, 0.4),
     rgb(4, 41, 58, 0.405)
   );
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
-  margin-left: 80px;
   height: 100%;
 }
 
@@ -437,7 +588,10 @@ nav ul li {
 .probabilities h3 {
   font-size: 1.5rem;
   text-align: center;
-  color: #ecb365;
+  background: linear-gradient(to right, #ffd096e9, #f6fdc3e9, #cdfad5e9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .happy,
@@ -456,7 +610,10 @@ nav ul li {
 .risk-rating h3 {
   font-size: 2.5rem;
   text-align: center;
-  color: #ecb365;
+  background: linear-gradient(to right, #ffd096e9, #f6fdc3e9, #cdfad5e9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .lg-circle {

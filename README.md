@@ -103,7 +103,7 @@ To install ResonexAI, follow these steps:
    cd frontend
    npm i
 
-   #Open a new terminal
+   # Open a new terminal
 
    cd backend
    npm i

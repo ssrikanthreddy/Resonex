@@ -5,6 +5,8 @@ import Lenis from '@studio-freight/lenis';
 import Navbar from './Navbar';
 import DemoButton from './DemoButton';
 import Features from './Features';
+import Footer from './Footer';
+import FAQ from './FAQ';
 
 const LandingPage = () => {
   const lenis = new Lenis({
@@ -73,6 +75,12 @@ const LandingPage = () => {
       </section>
       <section id="features">
         <Features />
+      </section>
+      <section id="faq">
+        <FAQ />
+      </section>
+      <section id="footer">
+        <Footer />
       </section>
     </>
   );
