@@ -1,7 +1,13 @@
 import { useState } from 'react';
 import AudioRecorder from './AudioRecorder';
 
-const Inbox = ({ setTargetPercent, setHappy, setSad, setActiveTab, activeTab}) => {
+const Inbox = ({
+  setTargetPercent,
+  setHappy,
+  setSad,
+  setActiveTab,
+  activeTab,
+}) => {
   const [reply, setReply] = useState('');
 
   const handleSubmit = async (buttonName) => {
@@ -53,21 +59,25 @@ const Inbox = ({ setTargetPercent, setHappy, setSad, setActiveTab, activeTab}) =
       <h1 className="prompt">Hey! How are you feeling today?</h1>
       <div className="inbox">
         <div className="tab-container">
-          <div className="tab" onClick={() => handleTab('text')}>
+          <div
+            className={`tab ${activeTab === 'text' ? 'active' : ''}`}
+            onClick={() => handleTab('text')}
+          >
             Text
           </div>
-          <div className="tab" onClick={() => handleTab('voice')}>
+          <div
+            className={`tab ${activeTab === 'voice' ? 'active' : ''}`}
+            onClick={() => handleTab('voice')}
+          >
             Voice
           </div>
         </div>
-        
+
         <div
           id="voice"
           className={activeTab === 'voice' ? 'wrapper active' : 'wrapper'}
         >
           <AudioRecorder />
-
-         
         </div>
 
         <div
@@ -105,14 +115,9 @@ const Inbox = ({ setTargetPercent, setHappy, setSad, setActiveTab, activeTab}) =
           </div>
 
           <div className="gpt-title">TheralyseGPT Says:</div>
-      <div className="gptoutput">{reply}</div>
-           </div>
-
-      
-    </div>
-
-        
-     
+          <div className="gptoutput">{reply}</div>
+        </div>
+      </div>
     </section>
   );
 };

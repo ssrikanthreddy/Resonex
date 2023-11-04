@@ -14,6 +14,10 @@ const __dirname = dirname(__filename);
 import { config } from 'dotenv';
 config();
 
+const openai = new OpenAI({
+  apiKey: process.env.OPENAPI_API_KEY,
+});
+
 const app = express();
 app.use(cors());
 

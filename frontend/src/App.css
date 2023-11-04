@@ -456,7 +456,13 @@ nav ul li {
   flex-direction: column;
   justify-content: center;
   flex: 1;
-  padding: 25px 50px 8px 100px;
+  padding: 25px 50px 8px 50px;
+}
+
+.inbox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 #output {
@@ -467,7 +473,7 @@ nav ul li {
 }
 
 .prompt {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
   background: linear-gradient(to right, #ffd096e9, #f6fdc3e9, #cdfad5e9);
   background-clip: text;
@@ -483,29 +489,93 @@ nav ul li {
   display: block;
 }
 
+.pie-chart {
+  width: 500px;
+  height: 500px;
+  padding: 50px;
+}
+
+._1ceqH ._1lB9c {
+  display: none !important;
+}
+
+._1ceqH ._1Yplu ._1Pz2d {
+  display: none !important;
+}
+
+._1ceqH ._3bC73 ._1YOWG {
+  display: none !important;
+}
+
+._1ceqH ._dt3-T {
+  min-height: 400px;
+  background: #212121;
+  border-radius: 0 0 3px 3px;
+  display: flex;
+  flex-direction: column;
+}
+
 .tab-container {
   display: flex;
-  border-radius: 10px;
-  padding: 0rem 2rem 1rem 0rem;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  border-radius: 30px;
+  filter: drop-shadow(0px 2px 15px rgba(0, 0, 0, 0.6));
+  backdrop-filter: blur(8px);
+  background: linear-gradient(
+    to right,
+    rgb(246, 253, 195, 0.5),
+    rgb(205, 250, 213, 0.5)
+  );
+  padding: 0.15rem;
+  width: 50%;
+  margin-bottom: 27px;
 }
 
 .tab {
   text-align: center;
   flex-grow: 1;
+  padding: 0.5rem;
+}
+
+.tab:hover {
+  background: linear-gradient(
+    to right,
+    rgba(246, 253, 195, 0.667),
+    rgba(205, 250, 213, 0.692)
+  );
+  border-radius: 30px;
+  color: #051728;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: linear-gradient(
+    to right,
+    rgba(246, 253, 195, 0.667),
+    rgba(205, 250, 213, 0.692)
+  );
+  border-radius: 30px;
+  color: #051728;
+  cursor: pointer;
 }
 
 .tab-content {
   display: none !important;
+  /* display: flex;
+  flex-direction: column; */
+  background: linear-gradient(
+    to bottom,
+    rgb(4, 41, 58, 0.4),
+    rgb(4, 41, 58, 0.405)
+  );
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+  height: 100%;
 }
 
 .tab-content.active {
-  display: block !important;
-}
-
-.tab:hover {
-  cursor: pointer;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
 }
 
 .feeling {
@@ -528,7 +598,7 @@ nav ul li {
 .buttons {
   display: flex;
   justify-content: space-between;
-  width: 35%;
+  width: 32%;
   /* position: relative; */
   margin: 30px 0 30px 0;
 }
