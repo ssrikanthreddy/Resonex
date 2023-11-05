@@ -52,7 +52,6 @@ const Inbox = ({
 
   const handleTab = (tabName) => {
     setActiveTab(tabName);
-    console.log(tabName);
   };
 
   return (
