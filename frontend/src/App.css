@@ -455,7 +455,7 @@ nav ul li {
 #input {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: ; */
   flex: 1;
   padding: 25px 50px 8px 50px;
 }
@@ -488,6 +488,13 @@ nav ul li {
 
 .wrapper.active {
   display: block;
+}
+
+.chart h2 {
+  background: linear-gradient(to right, #ffd096e9, #f6fdc3e9, #cdfad5e9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .chart {
@@ -535,9 +542,9 @@ nav ul li {
   flex-direction: column;
   justify-content: center;
   min-height: none !important;
-  filter: drop-shadow(0px 2px 15px rgba(0, 0, 0, 0.6));
+  filter: drop-shadow(0px 2px 15px rgba(0, 0, 0, 0.185));
   backdrop-filter: blur(8px);
-  
+  background-color: rgb(4, 41, 58, 0.5) !important;
   border-radius: 30px !important;
 }
 
@@ -624,7 +631,7 @@ nav ul li {
 .buttons {
   display: flex;
   justify-content: space-between;
-  width:46%;
+  width: 46%;
   /* position: relative; */
   margin: 30px 0 30px 0;
 }
@@ -686,7 +693,6 @@ nav ul li {
   align-self: stretch;
   justify-content: space-around;
   padding: 3rem 0rem;
-  border-bottom: #ecb46571 1px solid;
 }
 
 .probabilities h3 {
@@ -707,12 +713,12 @@ nav ul li {
 }
 
 .small-circle {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
 }
 
 .risk-rating h3 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   text-align: center;
   background: linear-gradient(to right, #ffd096e9, #f6fdc3e9, #cdfad5e9);
   background-clip: text;
@@ -721,8 +727,8 @@ nav ul li {
 }
 
 .lg-circle {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
 }
 
 tspan {
@@ -742,11 +748,11 @@ tspan {
   flex-direction: column;
   justify-content: flex-start;
 }
-._1ceqH{
+._1ceqH {
   background: transparent !important;
 }
 ._2fG9h {
-  background: transparent !important
+  background: transparent !important;
 }
 ._1ceqH ._dt3-T {
   min-height: 32.5em !important;
@@ -757,16 +763,16 @@ tspan {
 ._1lB9c {
   display: none !important;
 }
-._2N9dq{
+._2N9dq {
   display: none;
 }
 ._3bC73 {
   background: transparent !important;
 }
 ._1Yplu {
-  display: none ;
+  display: none;
 }
-._1YOWG{
+._1YOWG {
   display: none;
 }
 
@@ -774,36 +780,35 @@ tspan {
   top: 1em;
 }
 /* The bg of the mic */
-._1dpop{
-  height: 15em !important; 
+._1dpop {
+  height: 15em !important;
   width: 15em !important;
 }
 /* The mic */
 ._3neb0 {
   height: 10em !important;
-  width: 10em !important; 
+  width: 10em !important;
 }
 /* Stop and pause buttons */
-._qxztz{
-  
+._qxztz {
 }
 /* Stop button outer */
-._2uz65{
+._2uz65 {
   height: 5em !important;
   width: 5em !important;
 }
 /* Stop button inner */
-._oEOY-{
+._oEOY- {
   height: 2em !important;
   width: 2em !important;
 }
 /* Pause button outer */
-._2uz65{
+._2uz65 {
   height: 5em !important;
   width: 5em !important;
 }
 /* Pause buttons inner */
-._2ACrw{
+._2ACrw {
   left: 80% !important;
   height: 2em !important;
   width: 4em !important;

@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React from 'react';
 import { VictoryPie, VictoryAnimation, VictoryLabel } from 'victory';
 
 const getColorByPercentage = (percentage) => {
@@ -6,15 +6,14 @@ const getColorByPercentage = (percentage) => {
   return `hsl(${hue * 360}, 100%, 50%)`;
 };
 
-
 class VictoryGraph extends React.Component {
   constructor() {
     super();
     this.state = {
-      percent: 25, data: this.getData(0)
+      percent: 25,
+      data: this.getData(0),
     };
   }
-
 
   componentDidMount() {
     this.setStateInterval = window.setInterval(() => {
@@ -22,16 +21,19 @@ class VictoryGraph extends React.Component {
     }, 2000);
   }
   getData(percent) {
-    return [{ x: 1, y: percent }, { x: 2, y: 100 - percent }];
+    return [
+      { x: 1, y: percent },
+      { x: 2, y: 100 - percent },
+    ];
   }
 
   updateData = (targetPercent) => {
-    const newPercent = targetPercent; 
+    const newPercent = targetPercent;
     this.setState({
       percent: newPercent,
-      data: this.getData(newPercent)
+      data: this.getData(newPercent),
     });
-  }
+  };
 
   render() {
     return (
@@ -40,25 +42,29 @@ class VictoryGraph extends React.Component {
           <VictoryPie
             standalone={false}
             animate={{ duration: 1000 }}
-            width={400} height={400}
+            width={400}
+            height={400}
             data={this.state.data}
             innerRadius={120}
             cornerRadius={25}
             labels={() => null}
             style={{
-              data: { fill: ({ datum }) => {
-                const color = getColorByPercentage(datum.y);
-                return datum.x === 1 ? color : "white";
-              }
-              }
+              data: {
+                fill: ({ datum }) => {
+                  const color = getColorByPercentage(datum.y);
+                  return datum.x === 1 ? color : 'rgb(255, 255, 221,0.5)';
+                },
+              },
             }}
           />
           <VictoryAnimation duration={1000} data={this.state}>
             {() => {
               return (
                 <VictoryLabel
-                  textAnchor="middle" verticalAnchor="middle"
-                  x={200} y={200}
+                  textAnchor="middle"
+                  verticalAnchor="middle"
+                  x={200}
+                  y={200}
                   text={`${Math.round(this.state.percent)}%`}
                   style={{ fontSize: 45 }}
                 />
