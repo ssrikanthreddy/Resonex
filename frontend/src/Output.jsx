@@ -1,7 +1,7 @@
 import CircleGraph from './CircleGraph';
 import PieChart from './PieChart';
 
-const Output = ({ targetPercent, happy, sad, activeTab }) => {
+const Output = ({ targetPercent, happy, sad, activeTab, arr }) => {
   return (
     <section id="output">
       <div
@@ -52,7 +52,7 @@ const Output = ({ targetPercent, happy, sad, activeTab }) => {
       >
         <h2>Emotion Spectrum</h2>
         <div className="pie-chart">
-          <PieChart />
+          <PieChart arr={arr}/>
         </div>
       </div>
     </section>

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import AudioRecorder from './AudioRecorder';
 
 const Inbox = ({
+  setData,
   setTargetPercent,
   setHappy,
   setSad,
@@ -77,7 +78,7 @@ const Inbox = ({
           id="voice"
           className={activeTab === 'voice' ? 'wrapper active' : 'wrapper'}
         >
-          <AudioRecorder />
+          <AudioRecorder setData={setData} />
         </div>
 
         <div

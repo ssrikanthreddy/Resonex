@@ -3,13 +3,17 @@ import { Pie } from 'react-chartjs-2';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const PieChart = () => {
-  const data = {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+
+
+const PieChart = ({arr}) => {
+    console.log(arr[0]);
+
+    const data = {
+    labels: ['Angry', 'Calm', 'Disgust', 'Fear', 'Happy', 'Neutral', 'Sad', 'Suprise'],
     datasets: [
       {
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        label: '% of Emotion',
+        data: arr,
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
           'rgba(54, 162, 235, 0.2)',
@@ -30,7 +34,7 @@ const PieChart = () => {
       },
     ],
   };
-
+  console.log(data.datasets[0].data)
   return <Pie data={data} />;
 };
 

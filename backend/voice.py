@@ -6,6 +6,8 @@ import joblib
 import tensorflow as tf
 from keras.models import load_model
 from pydub import AudioSegment
+import json
+
 
 # Load the audio file
 audio = AudioSegment.from_file("uploads/audio.wav")
@@ -20,7 +22,7 @@ desired_sample_rate = 48000
 audio = audio.set_frame_rate(desired_sample_rate).set_channels(desired_channels)
 audio.export("uploads/audio.wav")
 
-print("Audio processing complete.")
+#print("Audio processing complete.")
 
 
 model = load_model('./models/voice_model.h5')
@@ -31,10 +33,14 @@ path_ = './uploads/audio.wav'
 data_, sample_rate_ = librosa.load(path_)
 X_ = np.array(extract_features(data_))
 X_ = scaler.transform(X_.reshape(1,-1))
-pred_test_ = model.predict(np.expand_dims(X_, axis=2))
+pred_test_ = model.predict(np.expand_dims(X_, axis=2),  verbose=0)
 y_pred_ = encoder.inverse_transform(pred_test_)
-print(y_pred_[0][0]) #emotion prediction
+#print(y_pred_[0][0]) #emotion prediction
 
+output_dict = {}
 for value, emotion in zip(pred_test_[0], encoder.categories_[0]):
-    print(emotion, f"{value:.10f}") #predicting values for each emotion
+    output_dict[emotion] = f"{value:.10f}"
 
+
+array = json.dumps(list(output_dict.values()))
+print(array)

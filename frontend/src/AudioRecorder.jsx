@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Recorder } from 'react-voice-recorder';
 import 'react-voice-recorder/dist/index.css';
 
-const AudioRecorder = () => {
+const AudioRecorder = ({setData}) => {
   const [audioDetails, setAudioDetails] = useState({
     url: null,
     blob: null,
@@ -43,12 +43,14 @@ const AudioRecorder = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log('Audio uploaded successfully:', data);
+        console.log(data.result);
+        setData(JSON.parse(data.result))
       })
       .catch((error) => {
         console.error('Error uploading audio:', error);
       });
   };
+
 
   const handleAudioUpload = (file) => {
     console.log(file);
