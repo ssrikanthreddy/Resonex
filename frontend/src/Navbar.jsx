@@ -11,7 +11,7 @@ const Navbar = () => {
       gsap.fromTo(
         navs,
         { opacity: 0 },
-        { opacity: 1, duration: 1, stagger: 0.01, ease: 'power2.out' }
+        { opacity: 1, duration: .6, stagger: 0.01, ease: 'power2.out' }
       );
 
       gsap.fromTo(
