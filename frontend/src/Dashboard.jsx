@@ -4,8 +4,13 @@ import Inbox from './Inbox';
 import Output from './Output';
 
 const Dashboard = () => {
+  setTimeout(() => {
+    window.alert(
+      'This is just a Frontend Showcase, Install locally along with API key for full experience.'
+    );
+  }, 1000);
 
-  const [arr, setData] = useState("[1., 2., 3., 4., 5., 6., 7., 8.]");
+  const [arr, setData] = useState('[1., 2., 3., 4., 5., 6., 7., 8.]');
   const [activeTab, setActiveTab] = useState('text');
   const [targetPercent, setTargetPercent] = useState(50);
   const [happy, setHappy] = useState(50);
@@ -29,14 +34,20 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <Inbox
-        setData = {setData}
+        setData={setData}
         setActiveTab={setActiveTab}
         activeTab={activeTab}
         setHappy={setHappy}
         setSad={setSad}
         setTargetPercent={setTargetPercent}
       />
-      <Output arr={arr} activeTab={activeTab} happy={happy} sad={sad} targetPercent={targetPercent} />
+      <Output
+        arr={arr}
+        activeTab={activeTab}
+        happy={happy}
+        sad={sad}
+        targetPercent={targetPercent}
+      />
     </div>
   );
 };
