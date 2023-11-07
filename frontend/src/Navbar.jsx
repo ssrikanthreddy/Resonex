@@ -56,7 +56,7 @@ const Navbar = () => {
   return (
     <nav>
       <div className="nav-elements" style={logoStyles}>
-        <img className="logo" src="./src/assets/ResonexLogo.png" alt="Logo" />
+        <img className="logo" src={'./src/assets/ResonexLogo.png'} alt="Logo" />
       </div>
       <div className="nav-elements nav-center" style={navCenterStyles}>
         <ul className="nav-links">
