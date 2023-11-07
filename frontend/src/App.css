@@ -403,7 +403,7 @@ nav ul li {
 .logo-foot {
   width: 3rem;
   height: 3rem;
-  background-image: url('./assets/ResonexLogoFull.png');
+  background-image: url('./public/ResonexLogoFull.png');
   background-size: cover;
   opacity: 0.85;
 }
