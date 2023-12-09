@@ -4,11 +4,7 @@ import Inbox from './Inbox';
 import Output from './Output';
 
 const Dashboard = () => {
-  setTimeout(() => {
-    window.alert(
-      'This is just a Frontend Showcase, Install locally along with API key for full experience.'
-    );
-  }, 1000);
+
 
   const [arr, setData] = useState('[1., 2., 3., 4., 5., 6., 7., 8.]');
   const [activeTab, setActiveTab] = useState('text');
