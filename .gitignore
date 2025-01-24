@@ -24,6 +24,7 @@ dist-ssr
 *.sln
 *.sw?
 
+backend/resonex
 backend/datasets
 backend/notebooks
 backend/backup_key.txt
